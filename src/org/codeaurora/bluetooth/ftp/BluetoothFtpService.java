@@ -797,9 +797,9 @@ public class BluetoothFtpService extends Service {
         if (action.equals(ACCESS_REQUEST_ACTION)) {
             deleteIntent.setAction(ACCESS_ALLOWED_ACTION);
             notification = new Notification(android.R.drawable.stat_sys_data_bluetooth,
-                getString(R.string.ftp_notif_ticker), System.currentTimeMillis());
-            notification.setLatestEventInfo(this, getString(R.string.ftp_notif_ticker),
-                    getString(R.string.ftp_notif_message, name), PendingIntent
+                getString(R.string.notif_ticker), System.currentTimeMillis());
+            notification.setLatestEventInfo(this, getString(R.string.notif_ticker),
+                    getString(R.string.notif_message, name), PendingIntent
                             .getActivity(this, 0, clickIntent, 0));
             notification.flags |= Notification.FLAG_AUTO_CANCEL;
             notification.flags |= Notification.FLAG_ONLY_ALERT_ONCE;
@@ -809,9 +809,9 @@ public class BluetoothFtpService extends Service {
         } else if (action.equals(AUTH_CHALL_ACTION)) {
             deleteIntent.setAction(AUTH_CANCELLED_ACTION);
             notification = new Notification(android.R.drawable.stat_sys_data_bluetooth,
-                getString(R.string.ftp_notif_ticker), System.currentTimeMillis());
+                getString(R.string.notif_ticker), System.currentTimeMillis());
             notification.setLatestEventInfo(this, getString(R.string.ftp_notif_title),
-                    getString(R.string.ftp_notif_message, name), PendingIntent
+                    getString(R.string.notif_message, name), PendingIntent
                             .getActivity(this, 0, clickIntent, 0));
 
             notification.flags |= Notification.FLAG_AUTO_CANCEL;
