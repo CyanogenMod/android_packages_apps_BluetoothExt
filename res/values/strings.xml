@@ -14,11 +14,11 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
- <string name="defaultname">Carkit</string>
+    <string name="defaultname">Carkit</string>
     <!-- Do not translate. android:process of this application. -->
-    <string name="process" translate="false"><xliff:g id="x" /></string>
+    <string name="process" translatable="false"><xliff:g id="x" /></string>
 
     <!-- Bluetooth FTP or MAP permission Alert Activity checkbox text [CHAR LIMIT=none] -->
-    <string name="bluetooth_remember_choice">Always Allow</string>
+    <string name="bluetooth_remember_choice">Always allow</string>
 
 </resources>
