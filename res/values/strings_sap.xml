@@ -29,9 +29,9 @@
  */
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="sap_notif_ticker">Bluetooth SIM Access request</string>
+    <string name="sap_notif_ticker">Bluetooth SIM access request</string>
     <!-- Notification title when a Bluetooth device wants to pair with us -->
-    <string name="sap_notif_title">Session Key Request for SAP</string>
+    <string name="sap_notif_title">Session key request for SAP</string>
     <!-- Notification message when a Bluetooth device wants to pair with us -->
     <string name="sap_notif_message">"Touch to connect to \u0022<xliff:g id="device_name">%1$s</xliff:g>\u0022."</string>
     <string name="sap_acceptance_timeout_message">There was time out to accept connection with %1$s</string>
