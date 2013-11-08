@@ -1,6 +1,5 @@
- /*
- * Copyright (c) 2008-2009, Motorola, Inc.
- * Copyright (c) 2010, The Linux Foundation. All rights reserved.
+/*
+ * Copyright (c) 2013, The Linux Foundation. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are met:
@@ -27,10 +26,9 @@
  * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package org.codeaurora.bluetooth.ftp;
+package org.codeaurora.bluetooth.dun;
 
-import org.codeaurora.bluetooth.R;
-
+import android.bluetooth.BluetoothDevice;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -40,36 +38,32 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.preference.Preference;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Button;
 import android.widget.CompoundButton.OnCheckedChangeListener;
-import android.text.InputFilter;
-import android.text.TextWatcher;
-import android.text.InputFilter.LengthFilter;
 
+import org.codeaurora.bluetooth.R;
 import com.android.internal.app.AlertActivity;
 import com.android.internal.app.AlertController;
 
 /**
- * FtpActivity shows two dialogues: One for accepting incoming ftp request and
- * the other prompts the user to enter a session key for authentication with a
- * remote Bluetooth device.
- */
-public class BluetoothFtpActivity extends AlertActivity implements
+ * DunPermissionActivity shows dialogues for accepting incoming DUN request
+ * with a remote Bluetooth device.
+  */
+
+public class BluetoothDunPermissionActivity extends AlertActivity implements
         DialogInterface.OnClickListener, Preference.OnPreferenceChangeListener, TextWatcher {
-    private static final String TAG = "BluetoothFtpActivity";
+    private static final String TAG = "BluetoothDunPermissionActivity";
 
-    private static final boolean V = BluetoothFtpService.VERBOSE;
-
-    private static final int BLUETOOTH_OBEX_AUTHKEY_MAX_LENGTH = 16;
+    private static final boolean V = BluetoothDunService.VERBOSE;
 
     private static final int DIALOG_YES_NO_CONNECT = 1;
-    private static final int DIALOG_YES_NO_AUTH = 2;
 
     private static final String KEY_USER_TIMEOUT = "user_timeout";
 
@@ -78,8 +72,6 @@ public class BluetoothFtpActivity extends AlertActivity implements
     private EditText mKeyView;
 
     private TextView messageView;
-
-    private String mSessionKey = "";
 
     private int mCurrentDialog;
 
@@ -98,10 +90,10 @@ public class BluetoothFtpActivity extends AlertActivity implements
     private BroadcastReceiver mReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
-            if (!BluetoothFtpService.USER_CONFIRM_TIMEOUT_ACTION.equals(intent.getAction())) {
+            if (!BluetoothDunService.USER_CONFIRM_TIMEOUT_ACTION.equals(intent.getAction())) {
                 return;
             }
-            finish();
+            onTimeout();
         }
     };
 
@@ -110,32 +102,25 @@ public class BluetoothFtpActivity extends AlertActivity implements
         super.onCreate(savedInstanceState);
         Intent i = getIntent();
         String action = i.getAction();
-        if(V) Log.v(TAG,"onCreate action = "+ action);
-        if (action.equals(BluetoothFtpService.ACCESS_REQUEST_ACTION )) {
-            showFtpDialog(DIALOG_YES_NO_CONNECT);
+        if (BluetoothDunService.DUN_ACCESS_REQUEST_ACTION.equals(action)) {
+            showDunDialog(DIALOG_YES_NO_CONNECT);
             mCurrentDialog = DIALOG_YES_NO_CONNECT;
-        } else if (action.equals(BluetoothFtpService.AUTH_CHALL_ACTION)){
-            showFtpDialog(DIALOG_YES_NO_AUTH);
-            mCurrentDialog = DIALOG_YES_NO_AUTH;
-        } else {
+        }
+        else {
             Log.e(TAG, "Error: this activity may be started only with intent "
-                    + "FTP_ACCESS_REQUEST or FTP_AUTH_CHALL ");
+                    + "DUN_ACCESS_REQUEST");
             finish();
         }
-        Log.i(TAG,"onCreate");
         registerReceiver(mReceiver, new IntentFilter(
-                BluetoothFtpService.USER_CONFIRM_TIMEOUT_ACTION));
+                BluetoothDunService.USER_CONFIRM_TIMEOUT_ACTION));
     }
-    /*
-    * Creates a Button with Yes/No dialog
-    */
-    private void showFtpDialog(int id) {
+
+    private void showDunDialog(int id) {
         final AlertController.AlertParams p = mAlertParams;
         switch (id) {
-
             case DIALOG_YES_NO_CONNECT:
                 p.mIconId = android.R.drawable.ic_dialog_info;
-                p.mTitle = getString(R.string.bluetooth_ftp_request);
+                p.mTitle = getString(R.string.bluetooth_dun_request);
                 p.mView = createView(DIALOG_YES_NO_CONNECT);
                 p.mPositiveButtonText = getString(android.R.string.yes);
                 p.mPositiveButtonListener = this;
@@ -144,52 +129,37 @@ public class BluetoothFtpActivity extends AlertActivity implements
                 mOkButton = mAlert.getButton(DialogInterface.BUTTON_POSITIVE);
                 setupAlert();
                 break;
+            default:
+                break;
+        }
+    }
 
-            case DIALOG_YES_NO_AUTH:
-                if(V) Log.v(TAG,"showFtpDialog DIALOG_YES_NO_AUTH");
-                p.mIconId = android.R.drawable.ic_dialog_info;
-                p.mTitle = getString(R.string.session_key_dialog_header);
-                p.mView = createView(DIALOG_YES_NO_AUTH);
-                p.mPositiveButtonText = getString(android.R.string.ok);
-                p.mPositiveButtonListener = this;
-                p.mNegativeButtonText = getString(android.R.string.cancel);
-                p.mNegativeButtonListener = this;
-                setupAlert();
-                mOkButton = mAlert.getButton(DialogInterface.BUTTON_POSITIVE);
-                if (mOkButton != null) {
-                    mOkButton.setEnabled(false);
-                } else {
-                    Log.e(TAG, "Error! mOkButton is null");
-                }
-                break;
-            default:
-                break;
+    private String getRemoteDeviceName() {
+        String remoteDeviceName = null;
+        Intent intent = getIntent();
+        if (intent.hasExtra(BluetoothDunService.EXTRA_BLUETOOTH_DEVICE)) {
+            BluetoothDevice device = intent.getParcelableExtra(BluetoothDunService.EXTRA_BLUETOOTH_DEVICE);
+            if (device != null) {
+                remoteDeviceName = device.getName();
+            }
         }
+
+        return (remoteDeviceName != null) ? remoteDeviceName : getString(R.string.defaultname);
     }
-    /*
-    * Creates a Text window for the FTP acceptance or session key dialog
-    */
+
     private String createDisplayText(final int id) {
-        String mRemoteName = BluetoothFtpService.getRemoteDeviceName();
-        if(V) Log.v(TAG,"createDisplayText" + id);
+        String mRemoteName = getRemoteDeviceName();
         switch (id) {
-            case DIALOG_YES_NO_CONNECT:
-                String mMessage1 = getString(R.string.bluetooth_ftp_acceptance_dialog_text, mRemoteName,
+        case DIALOG_YES_NO_CONNECT:
+            String mMessage1 = getString(R.string.bluetooth_dun_acceptance_dialog_text, mRemoteName,
                     mRemoteName);
-                return mMessage1;
-            case DIALOG_YES_NO_AUTH:
-                String mMessage2 = getString(R.string.session_key_dialog_title, mRemoteName);
-                return mMessage2;
-            default:
-                Log.e(TAG,"Display Text id ("+ id + ")not part of FTP resource");
-                return null;
+            return mMessage1;
+        default:
+            return null;
         }
     }
-    /*
-    * Creates a view for the dialog and text to get the user inputs
-    */
+
     private View createView(final int id) {
-        if(V) Log.v(TAG,"createView" + id);
         switch (id) {
             case DIALOG_YES_NO_CONNECT:
                 mView = getLayoutInflater().inflate(R.layout.bluetooth_access, null);
@@ -200,96 +170,64 @@ public class BluetoothFtpActivity extends AlertActivity implements
                     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                         if (isChecked) {
                             mAlwaysAllowedValue = true;
-                       } else {
-                           mAlwaysAllowedValue = false;
+                        } else {
+                            mAlwaysAllowedValue = false;
                         }
                     }
                 });
                 return mView;
-            case DIALOG_YES_NO_AUTH:
-                mView = getLayoutInflater().inflate(R.layout.auth, null);
-                messageView = (TextView)mView.findViewById(R.id.message);
-                messageView.setText(createDisplayText(id));
-                mKeyView = (EditText)mView.findViewById(R.id.text);
-                mKeyView.addTextChangedListener(this);
-                mKeyView.setFilters(new InputFilter[] {
-                    new LengthFilter(BLUETOOTH_OBEX_AUTHKEY_MAX_LENGTH)
-                });
-                return mView;
             default:
-                Log.e(TAG,"Create view id ("+ id + ")not part of FTP resource");
                 return null;
         }
     }
 
     private void onPositive() {
-        if(V) Log.v(TAG,"onPositive mtimeout = " + mTimeout + "mCurrentDialog = " + mCurrentDialog);
         if (!mTimeout) {
-               if (mCurrentDialog == DIALOG_YES_NO_CONNECT) {
-                sendIntentToReceiver(BluetoothFtpService.ACCESS_ALLOWED_ACTION,
-                        BluetoothFtpService.EXTRA_ALWAYS_ALLOWED, mAlwaysAllowedValue);
-            } else if (mCurrentDialog == DIALOG_YES_NO_AUTH) {
-                sendIntentToReceiver(BluetoothFtpService.AUTH_RESPONSE_ACTION,
-                        BluetoothFtpService.EXTRA_SESSION_KEY, mSessionKey);
-                mKeyView.removeTextChangedListener(this);
-           }
+            if (mCurrentDialog == DIALOG_YES_NO_CONNECT) {
+                sendIntentToReceiver(BluetoothDunService.DUN_ACCESS_ALLOWED_ACTION,
+                        BluetoothDunService.DUN_EXTRA_ALWAYS_ALLOWED, mAlwaysAllowedValue);
+            }
         }
         mTimeout = false;
         finish();
     }
 
     private void onNegative() {
-        if(V) Log.v(TAG,"onNegative mtimeout = " + mTimeout + "mCurrentDialog = " + mCurrentDialog);
-           if (mCurrentDialog == DIALOG_YES_NO_CONNECT) {
-                sendIntentToReceiver(BluetoothFtpService.ACCESS_DISALLOWED_ACTION,
-                BluetoothFtpService.EXTRA_ALWAYS_ALLOWED, mAlwaysAllowedValue);
-            } else if (mCurrentDialog == DIALOG_YES_NO_AUTH) {
-                 sendIntentToReceiver(BluetoothFtpService.AUTH_CANCELLED_ACTION, null, null);
-                 mKeyView.removeTextChangedListener(this);
+        if (mCurrentDialog == DIALOG_YES_NO_CONNECT) {
+            sendIntentToReceiver(BluetoothDunService.DUN_ACCESS_DISALLOWED_ACTION, null, null);
         }
         finish();
     }
-    /*
-    * Sends an intent to the BluetoothFtpService class with a String parameter
-    * @param intentName the name of the intent to be broadcasted
-    * @param extraName the name of the extra parameter broadcasted
-    * @param extraValue the extra name parameter broadcasted
-    */
+
     private void sendIntentToReceiver(final String intentName, final String extraName,
             final String extraValue) {
         Intent intent = new Intent(intentName);
-        intent.setClassName(BluetoothFtpService.THIS_PACKAGE_NAME, BluetoothFtpReceiver.class
+        intent.setClassName(BluetoothDunService.THIS_PACKAGE_NAME, BluetoothDunReceiver.class
                 .getName());
         if (extraName != null) {
             intent.putExtra(extraName, extraValue);
         }
         sendBroadcast(intent);
     }
-    /*
-    * Sends an intent to the BluetoothFtpService class with a integer parameter
-    * @param intentName the name of the intent to be broadcasted
-    * @param extraName the name of the extra parameter broadcasted
-    * @param extraValue the extra name parameter broadcasted
 
-    */
     private void sendIntentToReceiver(final String intentName, final String extraName,
             final boolean extraValue) {
         Intent intent = new Intent(intentName);
-        intent.setClassName(BluetoothFtpService.THIS_PACKAGE_NAME, BluetoothFtpReceiver.class
+        intent.setClassName(BluetoothDunService.THIS_PACKAGE_NAME, BluetoothDunReceiver.class
                 .getName());
         if (extraName != null) {
             intent.putExtra(extraName, extraValue);
+        }
+        Intent i = getIntent();
+        if (i.hasExtra(BluetoothDunService.EXTRA_BLUETOOTH_DEVICE)) {
+            intent.putExtra(BluetoothDunService.EXTRA_BLUETOOTH_DEVICE, i.getParcelableExtra(BluetoothDunService.EXTRA_BLUETOOTH_DEVICE));
         }
         sendBroadcast(intent);
     }
 
     public void onClick(DialogInterface dialog, int which) {
-        if(V) Log.v(TAG,"onClick which = " + which);
         switch (which) {
             case DialogInterface.BUTTON_POSITIVE:
-                if (mCurrentDialog == DIALOG_YES_NO_AUTH) {
-                    mSessionKey = mKeyView.getText().toString();
-                }
                 onPositive();
                 break;
 
@@ -303,28 +241,13 @@ public class BluetoothFtpActivity extends AlertActivity implements
 
     private void onTimeout() {
         mTimeout = true;
-        Button mButton =  mAlert.getButton(DialogInterface.BUTTON_NEGATIVE);
-        if(V) Log.v(TAG,"onTimeout mCurrentDialog = " + mCurrentDialog);
-      if (mCurrentDialog == DIALOG_YES_NO_CONNECT) {
-            messageView.setText(getString(R.string.acceptance_timeout_message,
-                    BluetoothFtpService.getRemoteDeviceName()));
-            mAlert.getButton(DialogInterface.BUTTON_NEGATIVE).setVisibility(View.GONE);
-            mAlwaysAllowed.setVisibility(View.GONE);
-            mAlwaysAllowed.clearFocus();
-        } else if (mCurrentDialog == DIALOG_YES_NO_AUTH) {
-            /* Proceed to clear the view only if one created */
+        if (mCurrentDialog == DIALOG_YES_NO_CONNECT) {
             if(mView != null) {
-                messageView.setText(getString(R.string.authentication_timeout_message,
-                        BluetoothFtpService.getRemoteDeviceName()));
-                mKeyView.setVisibility(View.GONE);
-                mKeyView.clearFocus();
-                mKeyView.removeTextChangedListener(this);
-                mOkButton.setEnabled(true);
-                if (mButton != null) {
-                    mButton.setVisibility(View.GONE);
-                } else {
-                    Log.e(TAG, "Error! mButton is null, can't setVisibility");
-                }
+                messageView.setText(getString(R.string.dun_acceptance_timeout_message,
+                        getRemoteDeviceName()));
+                mAlert.getButton(DialogInterface.BUTTON_NEGATIVE).setVisibility(View.GONE);
+                mAlwaysAllowed.setVisibility(View.GONE);
+                mAlwaysAllowed.clearFocus();
             }
         }
 
@@ -337,6 +260,7 @@ public class BluetoothFtpActivity extends AlertActivity implements
         super.onRestoreInstanceState(savedInstanceState);
         mTimeout = savedInstanceState.getBoolean(KEY_USER_TIMEOUT);
         if (V) Log.v(TAG, "onRestoreInstanceState() mTimeout: " + mTimeout);
+
         if (mTimeout) {
             onTimeout();
         }
@@ -369,13 +293,12 @@ public class BluetoothFtpActivity extends AlertActivity implements
             mOkButton.setEnabled(true);
         }
     }
-
     private final Handler mTimeoutHandler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
             switch (msg.what) {
                 case DISMISS_TIMEOUT_DIALOG:
-                    if (V) Log.v(TAG, "Received DISMISS_TIMEOUT_DIALOG msg");
+                    if (V) Log.v(TAG, "Received DISMISS_TIMEOUT_DIALOG msg.");
                     finish();
                     break;
                 default:
