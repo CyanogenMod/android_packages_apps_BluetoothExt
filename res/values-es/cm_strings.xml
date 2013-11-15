@@ -26,6 +26,12 @@
     <string name="ftp_notif_connected">Acceso Bluetooth a transferencia de archivos para \u00AB<xliff:g id="device_name">%1$s</xliff:g>\u00BB</string>
     <string name="bluetooth_ftp_request">Solicitud FTP</string>
     <string name="bluetooth_ftp_acceptance_dialog_text">%1$s quiere acceder a tus archivos y carpetas. ¿Permitir acceso a %2$s?</string>
+    <string name="dun_notif_ticker">Solicitud DUN</string>
+    <string name="dun_notif_title">Clave de sesión para DUN requerida</string>
+    <string name="dun_notif_message">Toca para conectar con \u00AB<xliff:g id="device_name">%1$s</xliff:g>\u00BB</string>
+    <string name="dun_acceptance_timeout_message">Terminó el tiempo de espera para aceptar la conexión con %1$s</string>
+    <string name="bluetooth_dun_request">Solicitud DUN</string>
+    <string name="bluetooth_dun_acceptance_dialog_text">%1$s quiere utilizar el acceso telefónico a redes. ¿Permitir acceso a %2$s?</string>
     <string name="defaultname">Kit de automóvil</string>
     <string name="bluetooth_remember_choice">No preguntar de nuevo</string>
     <string name="session_key_dialog_title">Escribir una clave de sesión para %1$s</string>
