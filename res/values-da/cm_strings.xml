@@ -34,10 +34,7 @@
     <string name="authentication_timeout_message">Godkendelse med %1$s er udløbet</string>
     <string name="notif_ticker">Bluetooth-forbindelsesanmodning</string>
     <string name="notif_message">Tryk for at oprette forbindelse til \'<xliff:g id="device_name">%1$s</xliff:g>\'.</string>
-    <string name="dun_notif_ticker">Bluetooth DUN-anmodning</string>
     <string name="dun_notif_title">Sessionsnøgle-anmodning for DUN</string>
-    <string name="dun_notif_message">"Tryk for at oprette forbindelse til \u0022<xliff:g id="device_name">%1$s</xliff:g>\u0022."</string>
-    <string name="dun_acceptance_timeout_message">Accept af forbindelse med %1$s er udløbet</string>
     <string name="bluetooth_dun_request">"DUN-anmodning"</string>
     <string name="bluetooth_dun_acceptance_dialog_text">%1$s vil gerne bruge DUN. Vil du give adgang til %2$s?</string>
 </resources>
