@@ -24,10 +24,7 @@
     <string name="notif_ticker">Запрос разрешения Bluetooth</string>
     <string name="notif_message">Нажмите для аутентификации устройства «<xliff:g id="device_name">%1$s</xliff:g>»</string>
 
-    <string name="dun_notif_ticker">Запрос разрешения для Bluetooth-модема</string>
     <string name="dun_notif_title">Требуется ключ сессии для использования Bluetooth-модема</string>
-    <string name="dun_notif_message">Нажмите для подключения к устройству «<xliff:g id="device_name">%1$s</xliff:g>»."</string>
-    <string name="dun_acceptance_timeout_message">Превышено время ожидания разрешения подключения к устройству «%1$s»</string>
     <string name="bluetooth_dun_request">Запрос разрешения на использование Bluetooth-модема</string>
     <string name="bluetooth_dun_acceptance_dialog_text">«%1$s» пытается использовать Bluetooth-модем этого устройства. Разрешить?</string>
 

@@ -30,10 +30,7 @@
  */
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="dun_notif_ticker">Bluetooth DUN versoek</string>
     <string name="dun_notif_title">Sessie versoek Sleutel vir DUN</string>
-    <string name="dun_notif_message">"Raak om aan te sluit aan \u0022<xliff:g id="device_name">%1$s</xliff:g>\u0022."</string>
-    <string name="dun_acceptance_timeout_message">Die tyd het uitgetel om verbinding te aanvaar met %1$s</string>
     <string name="bluetooth_dun_request">"DUN versoek"</string>
     <string name="bluetooth_dun_acceptance_dialog_text">%1$s wil DUN gebruik. Gee toegang aan: %2$s?</string>
 </resources>
