@@ -28,10 +28,7 @@
     <string name="ftp_notif_connected">Accés a transferències d\'arxius Bluetooth per \'<xliff:g id="device_name">%1$s</xliff:g>\'.</string>
     <string name="bluetooth_ftp_request">Petició FTP</string>
     <string name="bluetooth_ftp_acceptance_dialog_text">%1$s voldria accedir als teus arxius i carpetes. Vols donar accés a %2$s?</string>
-    <string name="dun_notif_ticker">Petició de DUN Bluetooth</string>
     <string name="dun_notif_title">Petitció de clau de sessió pel DUN</string>
-    <string name="dun_notif_message">"Toca per connectar a \u0022<xliff:g id="device_name">%1$s</xliff:g>\u0022."</string>
-    <string name="dun_acceptance_timeout_message">Hi havia un temps d\'espera per acceptar la connexió amb %1$s</string>
     <string name="bluetooth_dun_request">"Petició DUN"</string>
     <string name="bluetooth_dun_acceptance_dialog_text">%1$s voldria utilitzar DUN. Vols donar accés a %2$s?</string>
     <string name="map_notif_active_session">Sessió activa Bluetooth MAP</string>
