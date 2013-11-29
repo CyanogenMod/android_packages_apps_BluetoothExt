@@ -30,10 +30,7 @@
  */
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="dun_notif_ticker">Bluetooth DUN prašymas</string>
     <string name="dun_notif_title">Rakto prašymas DUN sesijai</string>
-    <string name="dun_notif_message">"Palieskite, kad prisijungtumėte prie \u0022<xliff:g id="device_name">%1$s</xliff:g>\u0022."</string>
-    <string name="dun_acceptance_timeout_message">Baigėsi autentikavimosi laikas su %1$s</string>
     <string name="bluetooth_dun_request">DUN užklausa</string>
     <string name="bluetooth_dun_acceptance_dialog_text">%1$s norėtų naudoti DUN. Suteikti prieigą %2$s?</string>
 </resources>
