@@ -34,10 +34,7 @@
     <string name="authentication_timeout_message">L\'intervallo di autorizzazione della connessione con %1$s è terminato</string>
     <string name="notif_ticker">Richiesta di connessione Bluetooth</string>
     <string name="notif_message">Toccare per connettersi a \u00AB<xliff:g id="device_name">%1$s</xliff:g>\u00BB</string>
-    <string name="dun_notif_ticker">Richiesta Bluetooth DUN</string>
     <string name="dun_notif_title">Chiave di sessione DUN richiesta</string>
-    <string name="dun_notif_message">Toccare per connettersi a \u0022<xliff:g id="device_name">%1$s</xliff:g>\u0022.</string>
-    <string name="dun_acceptance_timeout_message">L\'intervallo di autorizzazione della connessione con %1$s è terminato</string>
     <string name="bluetooth_dun_request">Richiesta DUN</string>
     <string name="bluetooth_dun_acceptance_dialog_text">%1$s richiede l\'accesso DUN. Consentire accesso a %2$s?</string>
 </resources>

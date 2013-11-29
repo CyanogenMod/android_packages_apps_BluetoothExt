@@ -29,11 +29,7 @@
  */
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="dun_notif_ticker">Žiadosť Bluetooth DUN</string>
     <string name="dun_notif_title">Žiadosť o kľúč relácie pre DUN</string>
-    <string name="dun_notif_message">"Dotykom sa pripojíte k \u0022<xliff:g id="device_name">%1$s</xliff:g>\u0022."</string>
-    <string name="dun_acceptance_timeout_message">Čas na prijatie pripojenia k %1$s vypršal</string>
     <string name="bluetooth_dun_request">"Žiadosť DUN"</string>
     <string name="bluetooth_dun_acceptance_dialog_text">Zariadenie %1$s by chcelo používať DUN. Umožniť prístup %2$s?</string>
-
 </resources>

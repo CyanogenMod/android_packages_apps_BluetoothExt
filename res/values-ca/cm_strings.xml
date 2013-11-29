@@ -37,7 +37,4 @@
     <string name="bluetooth_mas_acceptance_dialog_text">%1$s voldria accedir als teus missatges. Vols donar accés a %2$s?</string>
     <string name="bluetooth_sap_request">Petició SAP</string>
     <string name="bluetooth_sap_acceptance_dialog_text">%1$s voldria accedir a la teva SIM. Vols donar accés a %2$s?</string>
-    <string name="dun_notif_ticker">Petició Bluetooth DUN</string>
-    <string name="dun_notif_message">"Toca per connectar amb \u0022<xliff:g id="device_name">%1$s</xliff:g>\u0022."</string>
-    <string name="dun_acceptance_timeout_message">Temps d\'espera per acceptar la connexió amb %1$s esgotat</string>
 </resources>
