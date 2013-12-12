@@ -32,6 +32,7 @@ package org.codeaurora.bluetooth.ftp;
 import android.content.Context;
 import android.os.Message;
 import android.os.Handler;
+import android.os.PowerManager;
 import android.os.StatFs;
 import android.text.TextUtils;
 import android.util.Log;
@@ -98,6 +99,8 @@ public class BluetoothFtpObexServer extends ServerRequestHandler {
 
     private Context mContext;
 
+    private PowerManager.WakeLock mWakeLock = null;
+
     public static boolean sIsAborted = false;
 
     public static final String ROOT_FOLDER_PATH = "/sdcard";
@@ -153,13 +156,22 @@ public class BluetoothFtpObexServer extends ServerRequestHandler {
     @Override
     public int onConnect(final HeaderSet request, HeaderSet reply) {
         if (D) Log.d(TAG, "onConnect()+");
+        acquireFtpWakeLock();
+        int returnVal = onConnectInternal(request,  reply);
+        releaseFtpWakeLock();
+        if (D) Log.d(TAG, "onConnect()- returning " + returnVal);
+        return returnVal;
+    }
+
+    private int onConnectInternal(final HeaderSet request, HeaderSet reply) {
+        if (D) Log.d(TAG, "onConnectInternal()+");
         /* Extract the Target header */
         try {
             byte[] uuid = (byte[])request.getHeader(HeaderSet.TARGET);
             if (uuid == null) {
                 return ResponseCodes.OBEX_HTTP_NOT_ACCEPTABLE;
             }
-            if (D) Log.d(TAG, "onConnect(): uuid=" + Arrays.toString(uuid));
+            if (D) Log.d(TAG, "onConnectInternal(): uuid=" + Arrays.toString(uuid));
 
             if (uuid.length != UUID_LENGTH) {
                 Log.w(TAG, "Wrong UUID length");
@@ -175,23 +187,23 @@ public class BluetoothFtpObexServer extends ServerRequestHandler {
             /* Add the uuid into the WHO header part of connect reply */
             reply.setHeader(HeaderSet.WHO, uuid);
         } catch (IOException e) {
-            Log.e(TAG,"onConnect "+ e.toString());
+            Log.e(TAG,"onConnectInternal "+ e.toString());
             return ResponseCodes.OBEX_HTTP_INTERNAL_ERROR;
         }
         /* Extract the remote WHO header and fill it in the Target header*/
         try {
             byte[] remote = (byte[])request.getHeader(HeaderSet.WHO);
             if (remote != null) {
-                if (D) Log.d(TAG, "onConnect(): remote=" +
+                if (D) Log.d(TAG, "onConnectInternal(): remote=" +
                                                  Arrays.toString(remote));
                 reply.setHeader(HeaderSet.TARGET, remote);
             }
         } catch (IOException e) {
-            Log.e(TAG,"onConnect "+ e.toString());
+            Log.e(TAG,"onConnectInternal "+ e.toString());
             return ResponseCodes.OBEX_HTTP_INTERNAL_ERROR;
         }
 
-        if (V) Log.v(TAG, "onConnect(): uuid is ok, will send out " +
+        if (V) Log.v(TAG, "onConnectInternal(): uuid is ok, will send out " +
                 "MSG_SESSION_ESTABLISHED msg.");
         /* Notify the FTP service about the session establishment */
         Message msg = Message.obtain(mCallback);
@@ -206,7 +218,7 @@ public class BluetoothFtpObexServer extends ServerRequestHandler {
             "\n SEC: "+ rootSecondaryStoragePath +"\n");
 
 
-        if (D) Log.d(TAG, "onConnect() -");
+        if (D) Log.d(TAG, "onConnectInternal() -");
         return ResponseCodes.OBEX_HTTP_OK;
     }
     /**
@@ -223,6 +235,7 @@ public class BluetoothFtpObexServer extends ServerRequestHandler {
     public void onDisconnect(final HeaderSet req, final HeaderSet resp) {
         if (D) Log.d(TAG, "onDisconnect() +");
 
+        acquireFtpWakeLock();
         resp.responseCode = ResponseCodes.OBEX_HTTP_OK;
         /* Send a message to the FTP service to close the Server session */
         if (mCallback != null) {
@@ -232,6 +245,7 @@ public class BluetoothFtpObexServer extends ServerRequestHandler {
             if (V) Log.v(TAG,
                  "onDisconnect(): msg MSG_SESSION_DISCONNECTED sent out.");
         }
+        releaseFtpWakeLock();
         if (D) Log.d(TAG, "onDisconnect() -");
     }
     /**
@@ -240,8 +254,10 @@ public class BluetoothFtpObexServer extends ServerRequestHandler {
     @Override
     public int onAbort(HeaderSet request, HeaderSet reply) {
         if (D) Log.d(TAG, "onAbort() +");
+        acquireFtpWakeLock();
         sIsAborted = true;
         if (D) Log.d(TAG, "onAbort() -");
+        releaseFtpWakeLock();
         return ResponseCodes.OBEX_HTTP_OK;
     }
 
@@ -261,7 +277,16 @@ public class BluetoothFtpObexServer extends ServerRequestHandler {
     */
     @Override
     public int onDelete(HeaderSet request, HeaderSet reply) {
-        if (D) Log.d(TAG, "onDelete() +");
+        if (D) Log.d(TAG, "onDelete()+");
+        acquireFtpWakeLock();
+        int returnVal = onDeleteInternal(request,  reply);
+        releaseFtpWakeLock();
+        if (D) Log.d(TAG, "onDelete()- returning " + returnVal);
+        return returnVal;
+    }
+
+    private int onDeleteInternal(HeaderSet request, HeaderSet reply) {
+        if (D) Log.d(TAG, "onDeleteInternal() +");
         String name = "";
         /* Check if Card is mounted */
         if(FileUtils.checkMountedState() == false) {
@@ -282,11 +307,11 @@ public class BluetoothFtpObexServer extends ServerRequestHandler {
               if(D)  Log.d(TAG, "cannot delete the directory " + name);
               return ResponseCodes.OBEX_HTTP_UNAUTHORIZED;
            }
-           if (D) Log.d(TAG,"OnDelete File = " + name +
+           if (D) Log.d(TAG,"onDeleteInternal File = " + name +
                                           "mCurrentPath = " + mCurrentPath );
            File deleteFile = new File(mCurrentPath + "/" + name);
            if(deleteFile.exists() == true){
-               if (D) Log.d(TAG, "onDelete(): Found File" + name + "in folder "
+               if (D) Log.d(TAG, "onDeleteInternal(): Found File" + name + "in folder "
                                                          + mCurrentPath);
                if(!deleteFile.canWrite()) {
                    return ResponseCodes.OBEX_HTTP_UNAUTHORIZED;
@@ -311,11 +336,11 @@ public class BluetoothFtpObexServer extends ServerRequestHandler {
                return ResponseCodes.OBEX_HTTP_NOT_FOUND;
            }
         }catch (IOException e) {
-            Log.e(TAG,"onDelete "+ e.toString());
+            Log.e(TAG,"onDeleteInternal "+ e.toString());
             if (D) Log.d(TAG, "Delete operation failed");
             return ResponseCodes.OBEX_HTTP_INTERNAL_ERROR;
         }
-        if (D) Log.d(TAG, "onDelete() -");
+        if (D) Log.d(TAG, "onDeleteInternal() -");
         return ResponseCodes.OBEX_HTTP_OK;
     }
     /**
@@ -335,7 +360,16 @@ public class BluetoothFtpObexServer extends ServerRequestHandler {
     */
     @Override
     public int onPut(final Operation op) {
-        if (D) Log.d(TAG, "onPut() +");
+        if (D) Log.d(TAG, "onPut()+");
+        acquireFtpWakeLock();
+        int returnVal = onPutInternal(op);
+        releaseFtpWakeLock();
+        if (D) Log.d(TAG, "onPut()- returning " + returnVal);
+        return returnVal;
+    }
+
+    private int onPutInternal(final Operation op) {
+        if (D) Log.d(TAG, "onPutInternal() +");
         HeaderSet request = null;
         long length;
         String name = "";
@@ -386,7 +420,7 @@ public class BluetoothFtpObexServer extends ServerRequestHandler {
             try {
                 in_stream = op.openInputStream();
             } catch (IOException e1) {
-                Log.e(TAG,"onPut open input stream "+ e1.toString());
+                Log.e(TAG,"onPutInternal open input stream "+ e1.toString());
                 if (D) Log.d(TAG, "Error while openInputStream");
                 return ResponseCodes.OBEX_HTTP_INTERNAL_ERROR;
             }
@@ -452,7 +486,7 @@ public class BluetoothFtpObexServer extends ServerRequestHandler {
                     }
                 }
             }catch (IOException e1) {
-                Log.e(TAG, "onPut File receive"+ e1.toString());
+                Log.e(TAG, "onPutInternal File receive"+ e1.toString());
                 if (D) Log.d(TAG, "Error when receiving file");
                 ((ServerOperation)op).isAborted = true;
                 sIsAborted = true;
@@ -465,7 +499,7 @@ public class BluetoothFtpObexServer extends ServerRequestHandler {
                 try {
                     buff_op_stream.close();
                  } catch (IOException e) {
-                     Log.e(TAG,"onPut close stream "+ e.toString());
+                     Log.e(TAG,"onPutInternal close stream "+ e.toString());
                      if (D) Log.d(TAG, "Error when closing stream after send");
                      return ResponseCodes.OBEX_HTTP_INTERNAL_ERROR;
                 }
@@ -491,11 +525,11 @@ public class BluetoothFtpObexServer extends ServerRequestHandler {
                                                        fileinfo.getAbsolutePath());
 
         }catch (IOException e) {
-            Log.e(TAG, "onPut headers error "+ e.toString());
+            Log.e(TAG, "onPutInternal headers error "+ e.toString());
             if (D) Log.d(TAG, "request headers error");
             return ResponseCodes.OBEX_HTTP_INTERNAL_ERROR;
         }
-        if (D) Log.d(TAG, "onPut() -");
+        if (D) Log.d(TAG, "onPutInternal() -");
         return ResponseCodes.OBEX_HTTP_OK;
     }
     /**
@@ -518,10 +552,20 @@ public class BluetoothFtpObexServer extends ServerRequestHandler {
     *         will be used
     */
     @Override
-    public int onSetPath(final HeaderSet request, final HeaderSet reply, final boolean backup,
-            final boolean create) {
+    public int onSetPath(final HeaderSet request, final HeaderSet reply,
+            final boolean backup, final boolean create) {
+        if (D) Log.d(TAG, "onSetPath()+");
+        acquireFtpWakeLock();
+        int returnVal = onSetPathInternal(request, reply, backup, create);
+        releaseFtpWakeLock();
+        if (D) Log.d(TAG, "onSetPath()- returning " + returnVal);
+        return returnVal;
+    }
 
-        if (D) Log.d(TAG, "onSetPath() +");
+    private int onSetPathInternal(final HeaderSet request, final HeaderSet reply,
+            final boolean backup, final boolean create) {
+
+        if (D) Log.d(TAG, "onSetPathInternal() +");
 
         String current_path_tmp = mCurrentPath;
         String tmp_path = null;
@@ -534,12 +578,12 @@ public class BluetoothFtpObexServer extends ServerRequestHandler {
         try {
             tmp_path = (String)request.getHeader(HeaderSet.NAME);
         } catch (IOException e) {
-            Log.e(TAG,"onSetPath  get header"+ e.toString());
+            Log.e(TAG,"onSetPathInternal  get header"+ e.toString());
             if (D) Log.d(TAG, "Get name header fail");
             return ResponseCodes.OBEX_HTTP_INTERNAL_ERROR;
         }
         if (D) Log.d(TAG, "backup=" + backup + " create=" + create +
-                   " name=" + tmp_path +"     mCurrentPath = " + mCurrentPath);
+                   " name=" + tmp_path +" mCurrentPath = " + mCurrentPath);
 
         /* If the name is "." or ".." do not allow to create or set the directory */
         if (TextUtils.equals(tmp_path, FOLDER_NAME_DOT) ||
@@ -557,17 +601,20 @@ public class BluetoothFtpObexServer extends ServerRequestHandler {
          * set the current path to ROOT Folder path
          */
         if (backup) {
-            if (D) Log.d(TAG, "current_tmp_path: " + current_path_tmp);
-            if (current_path_tmp.length() != 0 && current_path_tmp.equals(rootPrimaryStoragePath) == false
-                      && current_path_tmp.equals(rootSecondaryStoragePath) == false ) {
-                current_path_tmp = current_path_tmp.substring(0,
-                        current_path_tmp.lastIndexOf("/"));
-            } else if (current_path_tmp.equals(rootPrimaryStoragePath ) ||
-               current_path_tmp.equals(rootSecondaryStoragePath)){
-             /* We have already reached the root folder but user tries to press the
-              * back button
-              */
-               current_path_tmp = null;
+            if (current_path_tmp != null) {
+                if (D) Log.d(TAG, "current_tmp_path: " + current_path_tmp);
+                if (current_path_tmp.length() != 0 &&
+                    current_path_tmp.equals(rootPrimaryStoragePath)
+                    == false && current_path_tmp.equals(rootSecondaryStoragePath) == false ) {
+                    current_path_tmp = current_path_tmp.substring(0,
+                            current_path_tmp.lastIndexOf("/"));
+                } else if (current_path_tmp.equals(rootPrimaryStoragePath ) ||
+                   current_path_tmp.equals(rootSecondaryStoragePath)){
+                 /* We have already reached the root folder but user tries to press the
+                  * back button
+                  */
+                   current_path_tmp = null;
+                }
             }
         } else {
             //SetPath here comes into picture only when tmp_path not null.
@@ -607,16 +654,16 @@ public class BluetoothFtpObexServer extends ServerRequestHandler {
            // new folder requested at PRIMARY and SECONDARY FOlDEERs level,
            // so return  ResponseCodes.OBEX_HTTP_NOT_ACCEPTABLE
            return ResponseCodes.OBEX_HTTP_NOT_ACCEPTABLE;
-        } else if(current_path_tmp == null && !backup ){
-           // current_path_tmp cannot be null if not backup
-           return ResponseCodes.OBEX_HTTP_NOT_FOUND;
+        } else if(current_path_tmp == null && backup ){
+           // current_path_tmp cannot be null if backup
+           return ResponseCodes.OBEX_HTTP_NOT_ACCEPTABLE;
         }
 
 
         mCurrentPath = current_path_tmp;
         if (V) Log.v(TAG, "after setPath, mCurrentPath ==  " + mCurrentPath);
 
-        if (D) Log.d(TAG, "onSetPath() -");
+        if (D) Log.d(TAG, "onSetPathInternal() -");
 
         return ResponseCodes.OBEX_HTTP_OK;
     }
@@ -626,6 +673,7 @@ public class BluetoothFtpObexServer extends ServerRequestHandler {
     @Override
     public void onClose() {
         if (D) Log.d(TAG, "onClose() +");
+        acquireFtpWakeLock();
         /* Send a message to the FTP service to close the Server session */
         if (mCallback != null) {
             Message msg = Message.obtain(mCallback);
@@ -634,12 +682,22 @@ public class BluetoothFtpObexServer extends ServerRequestHandler {
             if (D) Log.d(TAG,
                        "onClose(): msg MSG_SERVERSESSION_CLOSE sent out.");
         }
+        releaseFtpWakeLock();
         if (D) Log.d(TAG, "onClose() -");
     }
 
     @Override
     public int onGet(Operation op) {
-        if (D) Log.d(TAG, "onGet() +");
+        if (D) Log.d(TAG, "onGet()+");
+        acquireFtpWakeLock();
+        int returnVal = onGetInternal(op);
+        releaseFtpWakeLock();
+        if (D) Log.d(TAG, "onGet()- returning " + returnVal);
+        return returnVal;
+    }
+
+    private int onGetInternal(Operation op) {
+        if (D) Log.d(TAG, "onGetInternal() +");
 
         sIsAborted = false;
         HeaderSet request = null;
@@ -662,7 +720,7 @@ public class BluetoothFtpObexServer extends ServerRequestHandler {
                return ResponseCodes.OBEX_HTTP_NOT_ACCEPTABLE;
             }
         } catch (IOException e) {
-            Log.e(TAG,"onGet request headers "+ e.toString());
+            Log.e(TAG,"onGetInternal request headers "+ e.toString());
             if (D) Log.d(TAG, "request headers error");
             return ResponseCodes.OBEX_HTTP_INTERNAL_ERROR;
         }
@@ -749,7 +807,7 @@ public class BluetoothFtpObexServer extends ServerRequestHandler {
             File fileinfo = new File (mCurrentPath + "/" + name);
             return sendFileContents(op,fileinfo);
         }
-        if (D) Log.d(TAG, "onGet() -");
+        if (D) Log.d(TAG, "onGetInternal() -");
         return ResponseCodes.OBEX_HTTP_BAD_REQUEST;
     }
 
@@ -1153,5 +1211,32 @@ public class BluetoothFtpObexServer extends ServerRequestHandler {
         if (D) Log.d(TAG, "closeinStream -");
 
         return returnvalue;
+    }
+
+    private void acquireFtpWakeLock() {
+        if (mWakeLock == null) {
+            PowerManager pm = (PowerManager) mContext.getSystemService(Context.POWER_SERVICE);
+            mWakeLock = pm.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK,
+                "StartingObexFtpTransaction");
+            mWakeLock.setReferenceCounted(false);
+            mWakeLock.acquire();
+            if (V) Log.v(TAG, "mWakeLock acquired");
+        }
+        else
+        {
+            Log.e(TAG, "mWakeLock already acquired");
+        }
+    }
+
+    private void releaseFtpWakeLock() {
+        if (mWakeLock != null) {
+            if (mWakeLock.isHeld()) {
+                mWakeLock.release();
+                if (V) Log.v(TAG, "mWakeLock released");
+            } else {
+                if (V) Log.v(TAG, "mWakeLock already released");
+            }
+            mWakeLock = null;
+        }
     }
 };

@@ -37,8 +37,6 @@ import android.content.Context;
 import android.content.ContentProviderClient;
 import android.content.Intent;
 import android.os.Message;
-import android.os.PowerManager;
-import android.os.PowerManager.WakeLock;
 import android.util.Log;
 import android.os.Handler;
 import android.text.TextUtils;
@@ -206,8 +204,6 @@ public class BluetoothFtpService extends Service {
 
     public static boolean isL2capSocket = false;
 
-    private WakeLock mWakeLock;
-
     private Notification mConnectedNotification = null;
 
     private BluetoothAdapter mAdapter;
@@ -369,10 +365,6 @@ public class BluetoothFtpService extends Service {
         if (VERBOSE) Log.v(TAG, "Ftp Service onDestroy");
 
         super.onDestroy();
-        if (mWakeLock != null) {
-            mWakeLock.release();
-            mWakeLock = null;
-        }
         closeService();
     }
 
@@ -459,13 +451,8 @@ public class BluetoothFtpService extends Service {
     private final void closeService() {
         if (VERBOSE) Log.v(TAG, "Ftp Service closeService");
 
-        if (mServerSession != null) {
-            mServerSession.close();
-            mServerSession = null;
-        }
-
         try {
-            closeRfcommSocket(true, true);
+            closeRfcommSocket(true, false);
         } catch (IOException ex) {
             Log.e(TAG, "CloseSocket error: " + ex);
         }
@@ -480,6 +467,17 @@ public class BluetoothFtpService extends Service {
             }
         }
 
+        try {
+            closeRfcommSocket(false, true);
+        } catch (IOException ex) {
+            Log.e(TAG, "CloseSocket error: " + ex);
+        }
+
+        if (mServerSession != null) {
+            mServerSession.close();
+            mServerSession = null;
+        }
+
         mHasStarted = false;
         if (stopSelfResult(mStartId)) {
             if (VERBOSE) Log.v(TAG, "successfully stopped ftp service");
@@ -488,19 +486,6 @@ public class BluetoothFtpService extends Service {
 
     private final void startObexServerSession() throws IOException {
         if (VERBOSE) Log.v(TAG, "Ftp Service startObexServerSession");
-
-        // acquire the wakeLock before start Obex transaction thread
-        if (mWakeLock == null) {
-            PowerManager pm = (PowerManager)getSystemService(Context.POWER_SERVICE);
-            mWakeLock = pm.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK,
-                    "StartingObexFtpTransaction");
-            mWakeLock.setReferenceCounted(false);
-        }
-
-        if(!mWakeLock.isHeld()) {
-            Log.e(TAG,"Acquire partial wake lock");
-            mWakeLock.acquire();
-        }
 
         mFtpServer = new BluetoothFtpObexServer(mSessionStatusHandler, this);
         synchronized (this) {
@@ -525,16 +510,6 @@ public class BluetoothFtpService extends Service {
     private void stopObexServerSession() {
         if (VERBOSE) Log.v(TAG, "Ftp Service stopObexServerSession");
 
-        // Release the wake lock if obex transaction is over
-        if(mWakeLock != null) {
-            if (mWakeLock.isHeld()) {
-                Log.e(TAG,"Release full wake lock");
-                mWakeLock.release();
-                mWakeLock = null;
-            } else {
-                mWakeLock = null;
-            }
-        }
         if (mServerSession != null) {
             mServerSession.close();
             mServerSession = null;
@@ -620,8 +595,14 @@ public class BluetoothFtpService extends Service {
                 try {
                     Log.v(RTAG,"Run Accept thread");
                     mConnSocket = mRfcommServerSocket.accept();
-                    isL2capSocket = false;
-                    mRemoteDevice = mConnSocket.getRemoteDevice();
+                    synchronized(BluetoothFtpService.this) {
+                        if(mConnSocket == null){
+                            Log.i(RTAG, "mConnSocket = null");
+                            break;
+                        }
+                        isL2capSocket = false;
+                        mRemoteDevice = mConnSocket.getRemoteDevice();
+                    }
                     if (mRemoteDevice == null) {
                         Log.i(RTAG, "getRemoteDevice() = null");
                         break;
