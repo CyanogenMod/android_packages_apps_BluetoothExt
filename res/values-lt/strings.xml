@@ -18,9 +18,9 @@
     <string name="defaultname">Laisvų rankų įranga</string>
     <string name="bluetooth_remember_choice">Daugiau neklausti</string>
     <string name="session_key_dialog_title">Įveskite sesijos raktą %1$s</string>
-    <string name="session_key_dialog_header">Reikalingas Bluetooth sesijos raktas</string>
+    <string name="session_key_dialog_header">"Reikalingas „Bluetooth“ sesijos raktas"</string>
     <string name="acceptance_timeout_message">Baigėsi ryšio iš %1$s priėmimo laikas</string>
     <string name="authentication_timeout_message">Baigėsi autentikavimosi su %1$s laikas</string>
-    <string name="notif_ticker">Bluetooth ryšio užklausa</string>
-    <string name="notif_message">Palieskite, kad prisijungtumėte prie \„<xliff:g id="device_name">%1$s</xliff:g>\“.</string>
+    <string name="notif_ticker">"„Bluetooth“ ryšio užklausa"</string>
+    <string name="notif_message">"Palieskite, kad prisijungtumėte prie „<xliff:g id="device_name">%1$s</xliff:g>“."</string>
 </resources>
