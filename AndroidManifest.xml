@@ -52,6 +52,28 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE" />
     <application android:process="com.android.bluetooth">
         <uses-library android:name="javax.obex" />
+        <uses-feature android:name="android.hardware.bluetooth_le" android:required="true" />
+        <service
+            android:enabled="@bool/profile_supported_btc"
+            android:name = ".btcservice.BTCService">
+        </service>
+        <receiver
+            android:exported="true"
+            android:enabled="@bool/profile_supported_btc"
+            android:name=".btcservice.BTCEventProvider">
+            <intent-filter>
+                <action android:name="android.bluetooth.adapter.action.STATE_CHANGED" />
+                <action android:name="android.bluetooth.adapter.action.DISCOVERY_STARTED" />
+                <action android:name="android.bluetooth.adapter.action.DISCOVERY_FINISHED" />
+                <action android:name="android.bluetooth.device.action.ACL_CONNECTED" />
+                <action android:name="android.bluetooth.device.action.ACL_DISCONNECTED" />
+                <action android:name="android.bluetooth.headset.profile.action.CONNECTION_STATE_CHANGED" />
+                <action android:name="android.bluetooth.headset.profile.action.AUDIO_STATE_CHANGED" />
+                <action android:name="android.bluetooth.a2dp.profile.action.CONNECTION_STATE_CHANGED" />
+                <action android:name="android.bluetooth.a2dp.profile.action.PLAYING_STATE_CHANGED" />
+                <action android:name="android.bluetooth.input.profile.action.CONNECTION_STATE_CHANGED" />
+            </intent-filter>
+        </receiver>
         <activity android:name=".map.BluetoothMasActivity"
             android:process="@string/process"
             android:excludeFromRecents="true"
@@ -156,5 +178,14 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
                 <action android:name="android.bluetooth.device.action.ACL_DISCONNECTED"/>
             </intent-filter>
         </receiver>
+        <service
+            android:name=".pxpservice.PxpMonitorService"
+            android:process="@string/process"
+            android:enabled="true" >
+            <intent-filter>
+                <action android:name="org.codeaurora.bluetooth.pxpservice.PxpMonitorService" />
+            </intent-filter>
+        </service>
+
     </application>
 </manifest>
