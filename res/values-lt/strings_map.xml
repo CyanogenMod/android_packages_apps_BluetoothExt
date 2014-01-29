@@ -30,8 +30,8 @@
  */
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="map_notif_active_session">Bluetooh MAP aktyvi sesija</string>
-    <string name="map_notif_connected">Bluetooth pranešimas, kad pasiektumėte \'<xliff:g id="device_name">%1$s</xliff:g>\'.</string>
+    <string name="map_notif_active_session">"„Bluetooth“ MAP aktyvi sesija"</string>
+    <string name="map_notif_connected">"„Bluetooth“ pranešimas, kad pasiektumėte „<xliff:g id="device_name">%1$s</xliff:g>“."</string>
     <string name="bluetooth_mas_request">Pranešimo prieigos prašymas</string>
     <string name="bluetooth_mas_acceptance_dialog_text">%1$s norėtų pasiekti jūsų pranešimus. Suteikti prieigą %2$s?</string>
 </resources>
