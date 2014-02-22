@@ -30,5 +30,5 @@
 
     <!-- Notification message when a Bluetooth device wants to pair with us -->
     <string name="notif_ticker">Bluetooth connection request</string>
-    <string name="notif_message">Touch to connect to \u2018<xliff:g id="device_name">%1$s</xliff:g>\u2019.</string>
+    <string name="notif_message">Touch to connect to \'<xliff:g id="device_name">%1$s</xliff:g>\'.</string>
 </resources>
