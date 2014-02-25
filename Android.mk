@@ -1,3 +1,7 @@
+ifneq (, $(filter aarch64 arm64, $(TARGET_ARCH)))
+    $(info TODOAArch64: $(LOCAL_PATH)/Android.mk: Enable build support for 64 bit)
+else
+
 LOCAL_PATH:= $(call my-dir)
 include $(CLEAR_VARS)
 
@@ -5,7 +9,8 @@ LOCAL_MODULE_TAGS := optional
 src_dirs:= src/org/codeaurora/bluetooth/ftp \
            src/org/codeaurora/bluetooth/sap \
            src/org/codeaurora/bluetooth/dun \
-           src/org/codeaurora/bluetooth/pxpservice
+           src/org/codeaurora/bluetooth/pxpservice \
+           src/org/codeaurora/bluetooth/a4wp
 
 ifeq ($(BOARD_HAS_QCA_BT_AR3002),true)
 src_dirs += src/org/codeaurora/bluetooth/btcservice
@@ -30,3 +35,4 @@ include $(BUILD_PACKAGE)
 
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
+endif
