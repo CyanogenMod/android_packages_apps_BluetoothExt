@@ -30,12 +30,7 @@
  */
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="defaultname">Kit auto</string>
-    <string name="bluetooth_remember_choice">Non richiedere di nuovo</string>
-    <string name="session_key_dialog_title">Digitare una chiave di sessione per %1$s</string>
-    <string name="session_key_dialog_header">Chiave di sessione Bluetooth richiesta</string>
-    <string name="acceptance_timeout_message">Intervallo di accesso da %1$s terminato</string>
-    <string name="authentication_timeout_message">L\'intervallo di autorizzazione della connessione con %1$s è terminato</string>
-    <string name="notif_ticker">Richiesta di connessione Bluetooth</string>
-    <string name="notif_message">Toccare per connettersi a \'<xliff:g id="device_name">%1$s</xliff:g>\'</string>
+    <string name="dun_notif_title">Richiesta chiave di sessione per DUN</string>
+    <string name="bluetooth_dun_request">Richiesta DUN</string>
+    <string name="bluetooth_dun_acceptance_dialog_text">%1$s richiede l\'accesso DUN. Consentire accesso a %2$s?</string>
 </resources>
