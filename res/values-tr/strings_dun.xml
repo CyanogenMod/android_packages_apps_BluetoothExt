@@ -31,7 +31,7 @@
  */
 -->
 <resources>
-  <string name="dun_notif_title">Rakto prašymas DUN sesijai</string>
-  <string name="bluetooth_dun_request">DUN užklausa</string>
-  <string name="bluetooth_dun_acceptance_dialog_text">%1$s norėtų naudoti DUN. Suteikti prieigą %2$s?</string>
+  <string name="dun_notif_title">DUN için Oturum anahtarı isteği</string>
+  <string name="bluetooth_dun_request">DUN isteği</string>
+  <string name="bluetooth_dun_acceptance_dialog_text">%1$s  DUN kullanmak istiyor. %2$s izin verecek misiniz?</string>
 </resources>

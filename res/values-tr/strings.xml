@@ -17,12 +17,11 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="defaultname">Kitcotxe</string>
-  <string name="bluetooth_remember_choice">No preguntis més</string>
-  <string name="session_key_dialog_title">Escriu la clau de sessió per a %1$s</string>
-  <string name="session_key_dialog_header">Clau de sessió Bluetooth requerida</string>
-  <string name="acceptance_timeout_message">Temps d\'espera per acceptar la connexió de %1$s esgotat</string>
-  <string name="authentication_timeout_message">Temps d\'espera per autentificar amb %1$s esgotat</string>
-  <string name="notif_ticker">Petició de connexió Bluetooth</string>
-  <string name="notif_message">Toca per connectar a \'<xliff:g id="device_name">%1$s</xliff:g>\'.</string>
+  <string name="defaultname">Araba kiti</string>
+  <string name="bluetooth_remember_choice">Yeniden sorma</string>
+  <string name="session_key_dialog_title">%1$s için oturum anahtarını girin</string>
+  <string name="session_key_dialog_header">Bluetooth oturum anahtarı gerekli</string>
+  <string name="acceptance_timeout_message">%1$s tarafından gelen bağlantı kabulü zaman aşımına uğradı</string>
+  <string name="authentication_timeout_message">%1$s ile yetkilendirme zaman aşımına uğradı</string>
+  <string name="notif_ticker">Bluetooth bağlantı isteği</string>
 </resources>

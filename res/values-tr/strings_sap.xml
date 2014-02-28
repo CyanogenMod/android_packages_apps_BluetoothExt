@@ -31,7 +31,6 @@
  */
 -->
 <resources>
-  <string name="dun_notif_title">Rakto prašymas DUN sesijai</string>
-  <string name="bluetooth_dun_request">DUN užklausa</string>
-  <string name="bluetooth_dun_acceptance_dialog_text">%1$s norėtų naudoti DUN. Suteikti prieigą %2$s?</string>
+  <string name="bluetooth_sap_request">SAP isteği</string>
+  <string name="bluetooth_sap_acceptance_dialog_text">%1$s  SIM kartınıza ulaşmak istiyor. %2$s izin verecek misiniz?</string>
 </resources>
