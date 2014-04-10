@@ -31,6 +31,6 @@
  */
 -->
 <resources>
-  <string name="bluetooth_sap_request">SAP kérelem</string>
-  <string name="bluetooth_sap_acceptance_dialog_text">%1$s szeretne hozzáférni az Ön SIM kártyájához. Engedélyezi a hozzáférést a következőnek: %2$s?</string>
+  <string name="bluetooth_sap_request">Pedido SAP</string>
+  <string name="bluetooth_sap_acceptance_dialog_text">%1$s gostaria de aceder ao cartão SIM. Permitir o acesso a %2$s?</string>
 </resources>

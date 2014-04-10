@@ -17,12 +17,12 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="defaultname">Carkit</string>
-  <string name="bluetooth_remember_choice">Niet meer vragen</string>
-  <string name="session_key_dialog_title">Typ de sessiesleutel voor %1$s</string>
-  <string name="session_key_dialog_header">Bluetooth-sessiesleutel vereist</string>
-  <string name="acceptance_timeout_message">Er is een time-out opgetreden voor het accepteren van de verbinding met %1$s</string>
-  <string name="authentication_timeout_message">Er is een time-out opgetreden voor het authenticeren met %1$s</string>
-  <string name="notif_ticker">Bluetooth-verbindingsverzoek</string>
-  <string name="notif_message">Tik om verbinding te maken met \'<xliff:g id="device_name">%1$s</xliff:g>\'.</string>
+  <string name="defaultname">Zestaw samochodowy</string>
+  <string name="bluetooth_remember_choice">Nie pytaj ponownie</string>
+  <string name="session_key_dialog_title">Podaj klucz sesji dla %1$s</string>
+  <string name="session_key_dialog_header">Klucz sesji Bluetooth jest wymagany</string>
+  <string name="acceptance_timeout_message">Upłynął czas na akceptacje połączenia od %1$s</string>
+  <string name="authentication_timeout_message">Upłynął czas na autoryzacje z %1$s</string>
+  <string name="notif_ticker">Prośba o połączenie Bluetooth</string>
+  <string name="notif_message">Dotknij, aby połączyć z  \'<xliff:g id="device_name">%1$s</xliff:g>\'.</string>
 </resources>
