@@ -31,6 +31,8 @@
  */
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="ftp_notif_title">מפתח דרוש להפעלת FTP</string>
+  <string name="ftp_notif_active_session">Bluetooth FTP פעיל</string>
   <string name="ftp_notif_connected">גישה להעברת קובץ ב-Bluetooth ל-\'<xliff:g id="device_name">%1$s</xliff:g>\'.</string>
   <string name="bluetooth_ftp_request">בקשת FTP</string>
   <string name="bluetooth_ftp_acceptance_dialog_text">%1$s מבקש לגשת לקבצים ותקיות אצלך. לתת הרשאה ל-%2$s?</string>

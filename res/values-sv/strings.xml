@@ -17,12 +17,12 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="defaultname">Ауто комплет</string>
-  <string name="bluetooth_remember_choice">Не питај ме поново</string>
-  <string name="session_key_dialog_title">Упишите кључ сесије за %1$s</string>
-  <string name="session_key_dialog_header">Bluetooth кључ сесије је потребан</string>
-  <string name="acceptance_timeout_message">Прихватање везе са %1$s истекло време</string>
-  <string name="authentication_timeout_message">Аутентификација са %1$s истекло време</string>
-  <string name="notif_ticker">Захтев за Bluetooth везу</string>
-  <string name="notif_message">Додирните да се повежете на \'<xliff:g id="име уређаја">%1$s</xliff:g>\'.</string>
+  <string name="defaultname">Car Kit</string>
+  <string name="bluetooth_remember_choice">Fråga inte igen</string>
+  <string name="session_key_dialog_title">Ange sessionsnyckel för %1$s</string>
+  <string name="session_key_dialog_header">Sessionsnyckel för bluetooth krävs</string>
+  <string name="acceptance_timeout_message">Tidsgräns uppnådd för godkännande av anslutning från %1$s</string>
+  <string name="authentication_timeout_message">Tidsgräns uppnådd för autentisering med %1$s</string>
+  <string name="notif_ticker">Begäran om bluetoothanslutning</string>
+  <string name="notif_message">Tryck för att ansluta till \'<xliff:g id="device_name">%1$s</xliff:g>\'.</string>
 </resources>
