@@ -30,7 +30,7 @@
  * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 -->
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="dun_notif_title">Требуется ключ сессии для использования Bluetooth-модема</string>
   <string name="bluetooth_dun_request">Запрос разрешения на использование Bluetooth-модема</string>
   <string name="bluetooth_dun_acceptance_dialog_text">«%1$s» пытается использовать Bluetooth-модем этого устройства. Разрешить?</string>

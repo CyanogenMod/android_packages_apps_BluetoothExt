@@ -30,7 +30,7 @@
  * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 -->
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="bluetooth_sap_request">SAP-anmodning</string>
   <string name="bluetooth_sap_acceptance_dialog_text">%1$s vil have adgang til dit SIM-kort. Vil du give adgang til %2$s?</string>
 </resources>

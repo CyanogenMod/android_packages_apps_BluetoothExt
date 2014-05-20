@@ -30,7 +30,7 @@
  * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 -->
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="dun_notif_title">Azonosítókulcs kérelem a DUN számára</string>
   <string name="bluetooth_dun_request">DUN kérelem</string>
   <string name="bluetooth_dun_acceptance_dialog_text">%1$s szeretné használni a DUN-t. Engedélyezi a hozzáférést a következőnek: %2$s?</string>

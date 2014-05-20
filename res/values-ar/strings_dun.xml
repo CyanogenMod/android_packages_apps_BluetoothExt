@@ -30,7 +30,7 @@
  * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 -->
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="dun_notif_title">مفتاح الجلسة مطلوب ليDUN</string>
   <string name="bluetooth_dun_request">طلب DUN</string>
   <string name="bluetooth_dun_acceptance_dialog_text">%1$sأود أن استخدام DUN. منح حق الوصول إلى %2$s؟</string>

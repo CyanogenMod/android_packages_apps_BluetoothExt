@@ -30,7 +30,7 @@
  * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 -->
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="bluetooth_sap_request">Žiadosť SAP</string>
   <string name="bluetooth_sap_acceptance_dialog_text">Zariadenie %1$s by chcelo pristupovať k Vašej SIM. Umožniť prístup %2$s?</string>
 </resources>

@@ -30,7 +30,7 @@
  * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 -->
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="bluetooth_sap_request">Solicitação SAP</string>
   <string name="bluetooth_sap_acceptance_dialog_text">%1$s gostaria de acessar seu chip SIM. Dar acesso a %2$s?</string>
 </resources>

@@ -30,7 +30,7 @@
  * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 -->
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="dun_notif_title">Clave de sesión para DUN requerida</string>
   <string name="bluetooth_dun_request">Solicitud DUN</string>
   <string name="bluetooth_dun_acceptance_dialog_text">%1$s quiere utilizar el acceso telefónico a redes. ¿Permitir acceso a %2$s?</string>
