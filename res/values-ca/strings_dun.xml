@@ -30,7 +30,7 @@
  * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 -->
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="dun_notif_title">Petició de clau de sessió pel DUN</string>
   <string name="bluetooth_dun_request">Petició DUN</string>
   <string name="bluetooth_dun_acceptance_dialog_text">%1$s voldria utilitzar DUN. Vols donar accés a %2$s?</string>
