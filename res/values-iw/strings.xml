@@ -17,7 +17,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="defaultname">Carkit</string>
+  <string name="defaultname">ערכת רכב</string>
   <string name="bluetooth_remember_choice">אל תשאל שוב</string>
   <string name="session_key_dialog_title">הקלד קוד הפעלה עבור %1$s</string>
   <string name="session_key_dialog_header">קוד הפעלה דרוש</string>
