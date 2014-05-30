@@ -33,7 +33,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="ftp_notif_title">FTP 的工作階段密鑰請求</string>
   <string name="ftp_notif_active_session">藍牙 FTP 活動階段</string>
-  <string name="ftp_notif_connected">藍牙檔案傳輸存取到 \'<xliff:g id="device_name">%1$s</xliff:g>\'。</string>
+  <string name="ftp_notif_connected">藍牙檔案傳輸存取到「<xliff:g id="device_name">%1$s</xliff:g>」。</string>
   <string name="bluetooth_ftp_request">FTP 請求</string>
   <string name="bluetooth_ftp_acceptance_dialog_text">%1$s 想存取你的檔案及資料夾，允許存取 %2$s 嗎？</string>
 </resources>
