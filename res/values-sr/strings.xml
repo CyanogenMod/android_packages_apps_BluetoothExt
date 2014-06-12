@@ -18,11 +18,11 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="defaultname">Ауто комплет</string>
-  <string name="bluetooth_remember_choice">Не питај ме поново</string>
-  <string name="session_key_dialog_title">Упишите кључ сесије за %1$s</string>
+  <string name="bluetooth_remember_choice">Не питај поново</string>
+  <string name="session_key_dialog_title">Упиши кључ сесије за %1$s</string>
   <string name="session_key_dialog_header">Bluetooth кључ сесије је потребан</string>
-  <string name="acceptance_timeout_message">Прихватање везе са %1$s истекло време</string>
-  <string name="authentication_timeout_message">Аутентификација са %1$s истекло време</string>
+  <string name="acceptance_timeout_message">Време прихватање везе са %1$s је истекло</string>
+  <string name="authentication_timeout_message">Време оверавања аутентичности са %1$s је истекло</string>
   <string name="notif_ticker">Захтев за Bluetooth везу</string>
-  <string name="notif_message">Додирните да се повежете на \'<xliff:g id="име уређаја">%1$s</xliff:g>\'.</string>
+  <string name="notif_message">Додирни за повезивање са \'<xliff:g id="име уређаја">%1$s</xliff:g>\'.</string>
 </resources>

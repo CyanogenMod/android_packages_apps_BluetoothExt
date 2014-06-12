@@ -33,7 +33,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="ftp_notif_title">Кључ сесије захтева FTP</string>
   <string name="ftp_notif_active_session">Bluetooth FTP активна сесија</string>
-  <string name="ftp_notif_connected">Приступ Bluetooth фајл трансфера на \'<xliff:g id="device_name">%1$s</xliff:g>\'.</string>
+  <string name="ftp_notif_connected">Bluetooth приступ трансфера фајлова на \'<xliff:g id="device_name">%1$s</xliff:g>\'.</string>
   <string name="bluetooth_ftp_request">FTP захтев</string>
-  <string name="bluetooth_ftp_acceptance_dialog_text">%1$s би да приступе Вашим датотекама и фасциклама. Дајте приступ %2$s?</string>
+  <string name="bluetooth_ftp_acceptance_dialog_text">%1$s жели да приступи твојим датотекама и фасциклама. Дозволи приступ %2$s?</string>
 </resources>
