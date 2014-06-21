@@ -31,8 +31,8 @@
  */
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="map_notif_active_session">蓝牙 MAP 活动会话</string>
-  <string name="map_notif_connected">蓝牙消息访问“<xliff:g id="device_name">%1$s</xliff:g>”。</string>
-  <string name="bluetooth_mas_request">信息访问请求</string>
-  <string name="bluetooth_mas_acceptance_dialog_text">%1$s 试图访问你的信息，允许 %2$s 访问？</string>
+  <string name="map_notif_active_session">Sesiune Bluetooth MAP activă</string>
+  <string name="map_notif_connected">Acces la mesaje prin Bluetooth pentru \'<xliff:g id="device_name">%1$s</xliff:g>\'.</string>
+  <string name="bluetooth_mas_request">Cerere acces la mesaj</string>
+  <string name="bluetooth_mas_acceptance_dialog_text">%1$s vrea să îți acceseze mesajele. Oferi acces pentru %2$s?</string>
 </resources>
