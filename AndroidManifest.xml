@@ -50,9 +50,9 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <uses-permission android:name="com.android.email.permission.READ_ATTACHMENT"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE" />
+    <uses-feature android:name="android.hardware.bluetooth_le" android:required="true" />
     <application android:process="com.android.bluetooth">
         <uses-library android:name="javax.obex" />
-        <uses-feature android:name="android.hardware.bluetooth_le" android:required="true" />
         <service
             android:name = ".btcservice.BTCService">
         </service>
