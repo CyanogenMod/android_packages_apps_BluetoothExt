@@ -33,7 +33,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="ftp_notif_title">FTPのセッションキーリクエスト</string>
   <string name="ftp_notif_active_session">Bluetooth FTPアクティブセッション</string>
-  <string name="ftp_notif_connected">Bluetoothファイル転送は｢<xliff:g id="device_name">%1$s</xliff:g>｣にアクセスします。</string>
+  <string name="ftp_notif_connected">｢<xliff:g id="device_name">%1$s</xliff:g>｣へのBluetoothファイル転送アクセス。</string>
   <string name="bluetooth_ftp_request">FTPリクエスト</string>
-  <string name="bluetooth_ftp_acceptance_dialog_text">%1$sがファイルとフォルダへアクセスしようとしています。。%2$sにアクセスを許可しますか？</string>
+  <string name="bluetooth_ftp_acceptance_dialog_text">%1$sがファイルとフォルダにアクセスしようとしています。%2$sにアクセスを許可しますか？</string>
 </resources>

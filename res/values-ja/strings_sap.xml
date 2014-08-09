@@ -32,5 +32,5 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="bluetooth_sap_request">SAPリクエスト</string>
-  <string name="bluetooth_sap_acceptance_dialog_text">%1$sがSIMへアクセスしようとしています。%2$sにアクセスを許可しますか？</string>
+  <string name="bluetooth_sap_acceptance_dialog_text">%1$sがSIMにアクセスしようとしています。%2$sにアクセスを許可しますか？</string>
 </resources>
