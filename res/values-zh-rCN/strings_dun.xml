@@ -31,7 +31,6 @@
  */
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="dun_notif_title">DUN 会话密钥请求</string>
   <string name="bluetooth_dun_request">DUN 请求</string>
   <string name="bluetooth_dun_acceptance_dialog_text">%1$s 试图使用 DUN，允许 %2$s 访问？</string>
 </resources>

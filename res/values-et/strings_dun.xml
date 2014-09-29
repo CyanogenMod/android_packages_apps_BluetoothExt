@@ -31,7 +31,6 @@
  */
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="dun_notif_title">Seansivõtme päring DUN-ile</string>
   <string name="bluetooth_dun_request">DUN taotlus</string>
   <string name="bluetooth_dun_acceptance_dialog_text">%1$s soovib kasutada DUN\'i. Lubada ligipääs seadmele %2$s?</string>
 </resources>

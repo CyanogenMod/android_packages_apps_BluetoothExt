@@ -31,7 +31,6 @@
  */
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="dun_notif_title">DUN 的工作階段密鑰請求</string>
   <string name="bluetooth_dun_request">DUN 請求</string>
   <string name="bluetooth_dun_acceptance_dialog_text">%1$s 要求使用 DUN，要將存取權授予 %2$s 嗎？</string>
 </resources>

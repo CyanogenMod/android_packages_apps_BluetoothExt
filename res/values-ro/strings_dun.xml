@@ -31,7 +31,6 @@
  */
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="dun_notif_title">Cheie cerută pentru sesiunea DUN</string>
   <string name="bluetooth_dun_request">Cerere DUN</string>
   <string name="bluetooth_dun_acceptance_dialog_text">%1$s vrea să utilizeze DUN. Oferi acces pentru %2$s?</string>
 </resources>

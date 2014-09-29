@@ -31,7 +31,6 @@
  */
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="dun_notif_title">داواکاری کلیلی وه‌رز بۆ DUN</string>
   <string name="bluetooth_dun_request">داواکاری DUN</string>
   <string name="bluetooth_dun_acceptance_dialog_text">%1$s ئالووده‌یه‌ به‌ به‌کارهێنانی DUN ، ئایا ده‌سه‌ڵات ده‌ده‌یت به‌ %2$s ؟</string>
 </resources>

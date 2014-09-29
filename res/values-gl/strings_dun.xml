@@ -31,7 +31,6 @@
  */
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="dun_notif_title">Necesaria clave de sesión para DUN</string>
   <string name="bluetooth_dun_request">Solicitude DUN</string>
   <string name="bluetooth_dun_acceptance_dialog_text">%1$s quere usar DUN. Permitir acceso a %2$s?</string>
 </resources>

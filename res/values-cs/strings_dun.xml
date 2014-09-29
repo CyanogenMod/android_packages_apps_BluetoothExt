@@ -31,7 +31,6 @@
  */
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="dun_notif_title">Požadován klíč relace pro DUN</string>
   <string name="bluetooth_dun_request">Požadavek DUN</string>
   <string name="bluetooth_dun_acceptance_dialog_text">%1$s vyžaduje použití DUN. Povolit přístup k %2$s?</string>
 </resources>
