@@ -31,6 +31,6 @@
  */
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="bluetooth_sap_request">SAP 請求</string>
-  <string name="bluetooth_sap_acceptance_dialog_text">%1$s 想存取你的 SIM 咭，授權 %2$s 存取？</string>
+  <string name="bluetooth_dun_request">DUN sorğusu</string>
+  <string name="bluetooth_dun_acceptance_dialog_text">%1$s DUN istifadə etmək istəyir. %2$s icazə verirsiniz?</string>
 </resources>
