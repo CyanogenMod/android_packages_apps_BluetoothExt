@@ -211,7 +211,9 @@ public class BluetoothFtpObexServer extends ServerRequestHandler {
         msg.sendToTarget();
         /*Initialize the internal, external storage root paths from Enivronment*/
         rootPrimaryStoragePath = Environment.getExternalStorageDirectory().getPath();
-        rootSecondaryStoragePath = System.getenv(ENV_SECONDARY_EXTERNAL_STORAGE);
+        String secondaryStorage = System.getenv(ENV_SECONDARY_EXTERNAL_STORAGE);
+        String[] secondaryStorageList = secondarystorage.split(":");
+        rootSecondaryStoragePath = secondarystoragelist[0];
         /*Initialize mCurrentPath to null to show Internal and External memory options*/
         mCurrentPath = null;
         if(D) Log.d(TAG,"ENV:  PRIMARY:  "+ rootPrimaryStoragePath +
