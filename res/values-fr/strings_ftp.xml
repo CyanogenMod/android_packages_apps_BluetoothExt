@@ -34,6 +34,6 @@
   <string name="ftp_notif_title">Demande de clé de session pour le FTP</string>
   <string name="ftp_notif_active_session">Session FTP bluetooth active</string>
   <string name="ftp_notif_connected">Le transfert de fichiers Bluetooth accède à <xliff:g id="device_name">%1$s</xliff:g>.</string>
-  <string name="bluetooth_ftp_request">Requête FTP</string>
+  <string name="bluetooth_ftp_request">Demande FTP</string>
   <string name="bluetooth_ftp_acceptance_dialog_text">%1$s souhaiterait accéder à vos fichiers et dossiers. Donner l\'accès à %2$s\u00A0?</string>
 </resources>

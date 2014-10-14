@@ -32,4 +32,5 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="bluetooth_sap_request">SAP 請求</string>
+  <string name="bluetooth_sap_acceptance_dialog_text">%1$s 要求存取您的 SIM 卡，要將存取權授予 %2$s 嗎？</string>
 </resources>
