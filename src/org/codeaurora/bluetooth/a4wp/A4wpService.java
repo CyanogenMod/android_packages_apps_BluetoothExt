@@ -713,7 +713,8 @@ public class A4wpService extends Service
         mAdvertiseSettings = new AdvertiseSettings.Builder()
             .setAdvertiseMode(AdvertiseSettings.ADVERTISE_MODE_WIPOWER_LATENCY)
             .setTxPowerLevel(AdvertiseSettings.ADVERTISE_TX_POWER_ULTRA_LOW)
-            .setConnectable(true).build();
+            .setConnectable(true)
+            .setTimeout(WIPOWER_ADV_TIMEOUT).build();
 
         Log.d(LOGTAG, " Calling mAdvertiser.startAdvertising");
         mAdvertiser.startAdvertising(mAdvertiseSettings, mAdvertisementData, mAdvertiseCallback);
