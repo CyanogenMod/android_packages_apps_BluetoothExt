@@ -1,4 +1,4 @@
-ifneq ($(TARGET_USES_AOSP),true)
+ifeq ($(BOARD_HAVE_QCOM_BLUETOOTH),true)
 
 LOCAL_PATH:= $(call my-dir)
 include $(CLEAR_VARS)
