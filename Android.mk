@@ -1,4 +1,4 @@
-ifeq ($(BOARD_HAVE_QCOM_BLUETOOTH),true)
+ifeq ($(BOARD_HAVE_BLUETOOTH_QCOM),true)
 
 LOCAL_PATH:= $(call my-dir)
 include $(CLEAR_VARS)
