@@ -591,7 +591,6 @@ public class A4wpService extends Service
                 Log.v(LOGTAG, "onConnectionStateChange:DISCONNECTED " + device + "charge complete " + mChargeComplete);
                 isConnected = false;
                 if (mDevice != null && mWipowerManager != null) {
-                    stopAdvertising();
                     mWipowerManager.enableDataNotification(false);
                     mWipowerManager.stopCharging();
                     if (mChargeComplete != true) {
