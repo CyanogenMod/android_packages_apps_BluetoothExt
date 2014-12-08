@@ -159,7 +159,6 @@ public class A4wpService extends Service
     private static boolean mWipowerBoot = false;
     private static boolean isChargePortSet = false;
     static boolean mChargeComplete = true;
-    static boolean isConnected = false;
 
     private AdvertiseSettings mAdvertiseSettings;
     private AdvertiseData mAdvertisementData;
@@ -620,11 +619,11 @@ public class A4wpService extends Service
                 mHandler.sendMessage(msg);
 
             } else {
-                Log.v(LOGTAG, "Cancel connection as part of -" + state);
-                if (mBluetoothGattServer != null) {
-                    if (mDevice != null) {
-                        mBluetoothGattServer.cancelConnection(mDevice);
-                    }
+                if (mBluetoothGattServer != null && mDevice != null) {
+                    Log.v(LOGTAG, "onPowerApply " + state + "dropping Connection");
+                    mBluetoothGattServer.cancelConnection(mDevice);
+                } else {
+                    Log.v(LOGTAG, "onPowerApply " + state + "skip dropping Connection");
                 }
             }
         }
@@ -687,10 +686,9 @@ public class A4wpService extends Service
         public void onConnectionStateChange(BluetoothDevice device, int status, int newState) {
             WipowerState state = WipowerState.OFF;
             mState = newState;
-            if (mState == BluetoothProfile.STATE_DISCONNECTED && isConnected == true) {
-                Log.v(LOGTAG, "onConnectionStateChange:DISCONNECTED " + device + "charge complete " + mChargeComplete);
-                isConnected = false;
-                if (mDevice != null && mWipowerManager != null) {
+            if (mState == BluetoothProfile.STATE_DISCONNECTED) {
+                if (mWipowerManager != null  && device.equals(mDevice)) {
+                    Log.v(LOGTAG, "onConnectionStateChange:DISCONNECTED " + device + "charge complete " + mChargeComplete);
                     mWipowerManager.enableDataNotification(false);
                     mWipowerManager.stopCharging();
                     if (mChargeComplete != true) {
@@ -705,10 +703,9 @@ public class A4wpService extends Service
                 isChargePortSet = false;
             } else if (mState == BluetoothProfile.STATE_CONNECTED) {
                 Log.v(LOGTAG, "onConnectionStateChange:CONNECTED");
-                mDevice = device;
                 /* Initiate a dummy connection such that on stop advertisment
                    the advetisment instances are cleared properly */
-                mBluetoothGattServer.connect(mDevice, false);
+                mBluetoothGattServer.connect(device, false);
             }
         }
 
@@ -778,7 +775,7 @@ public class A4wpService extends Service
                 else if(id == A4WP_PRU_STATIC_UUID)
                 {
                     value = mPruStaticParam.getValue();
-                    isConnected = true;
+                    mDevice = device;
                 }
                 else if (id == A4WP_PRU_DYNAMIC_UUID) {
                     if (mPruDynamicParam == null) {
