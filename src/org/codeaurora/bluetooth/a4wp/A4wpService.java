@@ -59,6 +59,10 @@ import android.wipower.WipowerManager.PowerLevel;
 import android.wipower.WipowerDynamicParam;
 import com.quicinc.wbc.WbcManager;
 import com.quicinc.wbc.WbcTypes;
+import android.os.Handler;
+import android.os.HandlerThread;
+import android.os.Looper;
+import android.os.Message;
 
 import android.bluetooth.le.AdvertiseCallback;
 import android.bluetooth.le.AdvertiseSettings;
@@ -79,6 +83,11 @@ public class A4wpService extends Service
     private BluetoothGattServer mBluetoothGattServer = null;
     private BluetoothDevice mDevice = null;
     private PowerManager.WakeLock mWakeLock = null;
+
+    // Advertising variables
+    private final static int START_ADVERTISING = 1;
+    private final static int STOP_ADVERTISING = 0;
+    private WipowerAdvHandler mHandler;
 
     private static final UUID A4WP_SERVICE_UUID = UUID.fromString("6455fffe-a146-11e2-9e96-0800200c9a67");
     //PRU writes
@@ -143,6 +152,25 @@ public class A4wpService extends Service
     private BluetoothLeAdvertiser mAdvertiser;
     private AdvertiseCallback mAdvertiseCallback = new myAdvertiseCallback(1);
     ParcelUuid uuid1 = ParcelUuid.fromString("6455fffe-a146-11e2-9e96-0800200c9a67");
+
+    // Handler to maintain advertisement messages
+    private final class WipowerAdvHandler extends Handler {
+        private WipowerAdvHandler(Looper looper) {
+            super(looper);
+        }
+
+       @Override
+        public void handleMessage(Message msg) {
+           switch (msg.what) {
+               case START_ADVERTISING:
+                   StartAdvertising();
+                   break;
+               case STOP_ADVERTISING:
+                   stopAdvertising();
+                   break;
+           }
+        }
+    }
 
     private WbcManager.WbcEventListener mWbcCallback = new WbcManager.WbcEventListener() {
 
@@ -571,7 +599,9 @@ public class A4wpService extends Service
             Log.v(LOGTAG, "onPowerApply" + state);
             if (state == PowerApplyEvent.ON) {
                 Log.v(LOGTAG, "StartAdvertising");
-                StartAdvertising();
+                Message msg = mHandler.obtainMessage(START_ADVERTISING);
+                mHandler.sendMessage(msg);
+
             } else {
                 Log.v(LOGTAG, "Cancel connection as part of -" + state);
                 if (mBluetoothGattServer != null) {
@@ -892,6 +922,11 @@ public class A4wpService extends Service
             Log.v(LOGTAG, "onCreate: charge complete " + mChargeComplete);
             mWbcManager.register(mWbcCallback);
         }
+        // Starting a thread to handle the advertising
+        HandlerThread thread = new HandlerThread("WipowerAdvHandler");
+        thread.start();
+        Looper looper = thread.getLooper();
+        mHandler = new WipowerAdvHandler(looper);
     }
 
     @Override
@@ -904,6 +939,11 @@ public class A4wpService extends Service
         if(SystemProperties.getBoolean("persist.a4wp.skipwakelock", false) == false) {
             //release wake lock during BT-OFF.
             acquire_wake_lock(false);
+        }
+        // Clear thread on destroy
+        Looper looper = mHandler.getLooper();
+        if (looper != null) {
+           looper.quit();
         }
     }
 
