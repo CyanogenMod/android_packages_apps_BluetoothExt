@@ -31,6 +31,6 @@
  */
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="bluetooth_dun_request">Ufro fir eng Internet-Awielconnectioun</string>
-  <string name="bluetooth_dun_acceptance_dialog_text">%1$s wëll eng Internet-Awielconnectioun opbauen. Accès fir %2$s erlaben?</string>
+  <string name="bluetooth_sap_request">এসএপি অনুরোধ</string>
+  <string name="bluetooth_sap_acceptance_dialog_text">%1$s আপনার সিমে প্রবেশ করতে চান। %2$s প্রবেশাধিকার দিতে?</string>
 </resources>
