@@ -159,6 +159,7 @@ public class A4wpService extends Service
     private static boolean mWipowerBoot = false;
     private static boolean isChargePortSet = false;
     static boolean mChargeComplete = true;
+    static boolean mOutputControl = true;
 
     private AdvertiseSettings mAdvertiseSettings;
     private AdvertiseData mAdvertisementData;
@@ -533,22 +534,25 @@ public class A4wpService extends Service
                 /* Hold wake lock during connection */
                 acquire_wake_lock(true);
             }
-            Log.v(LOGTAG, "StopAdvertising on connect");
-            Message msg = mHandler.obtainMessage(STOP_ADVERTISING);
-            mHandler.sendMessage(msg);
-            mWipowerManager.enableAlertNotification(false);
-            mWipowerManager.enableDataNotification(true);
+            if (mOutputControl == true) {
+                Log.v(LOGTAG, "StopAdvertising on connect");
+                Message msg = mHandler.obtainMessage(STOP_ADVERTISING);
+                mHandler.sendMessage(msg);
+                mWipowerManager.enableAlertNotification(false);
+                mWipowerManager.enableDataNotification(true);
+            }
+            mOutputControl = true;
         } else {
             Log.v(LOGTAG, "do Disable PruOutPut");
             if (mChargeComplete == true) {
                 mWipowerManager.enablePowerApply(true, true, true);
             }
             mWipowerManager.stopCharging();
-            mWipowerManager.enableDataNotification(false);
             if(SystemProperties.getBoolean("persist.a4wp.skipwakelock", false) == false) {
                 acquire_wake_lock(false);
             }
             isChargePortSet = false;
+            mOutputControl = false;
             return status;
         }
 
@@ -741,7 +745,7 @@ public class A4wpService extends Service
             if (!isChargePortSet) {
                 VRECT_DYN = (short)toUnsigned(value[VRECT_LSB]);
                 VRECT_DYN |= (short)(toUnsigned(value[VRECT_MSB]) << 8);
-                if (DEFAULT_VRECT_MIN <= VRECT_DYN) {
+                if (DEFAULT_VRECT_MIN <= VRECT_DYN && mOutputControl) {
                     mWipowerManager.startCharging();
                     isChargePortSet = true;
                 }
@@ -776,6 +780,7 @@ public class A4wpService extends Service
                     /* Initiate a dummy connection such that on stop advertisment
                        the advetisment instances are cleared properly */
                     mBluetoothGattServer.connect(mDevice, false);
+                    mOutputControl = true;
                 }
                 else if (id == A4WP_PRU_DYNAMIC_UUID) {
                     if (mPruDynamicParam == null) {
