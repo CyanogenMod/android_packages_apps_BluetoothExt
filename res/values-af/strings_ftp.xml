@@ -31,6 +31,8 @@
  */
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="ftp_session_key_dialog_title">Tik sessie sleutel in vir %1$s</string>
+  <string name="ftp_session_key_dialog_header">Verwag Bluetooth sessie sleutel</string>
   <string name="ftp_notif_title">Sessie sleutel versoek vir FTP</string>
   <string name="ftp_notif_active_session">Aktiewe Bluetooth FTP sessie</string>
   <string name="ftp_notif_connected">Bluetooth lêer oordrag toegang tot \'<xliff:g id="device_name">%1$s</xliff:g>\'.</string>
