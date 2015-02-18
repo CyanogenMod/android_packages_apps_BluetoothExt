@@ -17,6 +17,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="app_name">Estensioni Bluetooth</string>
   <string name="defaultname">Kit auto</string>
   <string name="bluetooth_remember_choice">Non richiedere di nuovo</string>
   <string name="acceptance_timeout_message">Intervallo di accesso da %1$s terminato</string>

@@ -17,6 +17,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="app_name">Bluetooth-Erweiderungen</string>
   <string name="defaultname">Fräispriechanlag</string>
   <string name="bluetooth_remember_choice">Net méi froen</string>
   <string name="acceptance_timeout_message">Den Zäitlimitt fir d\'Unhuele vun der Connectioun mat %1$s gouf iwwerschratt</string>
