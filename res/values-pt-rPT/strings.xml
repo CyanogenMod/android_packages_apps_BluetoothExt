@@ -17,11 +17,11 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="app_name">Bluetooth uitbreidings</string>
-  <string name="defaultname">Carkit</string>
-  <string name="bluetooth_remember_choice">Onthou keuse</string>
-  <string name="acceptance_timeout_message">Konneksie aanvaarding van %1$s se tyd is verby</string>
-  <string name="authentication_timeout_message">Verifikasie met %1$s se tyd is verby</string>
-  <string name="notif_ticker">Bluetooth-konneksie versoek</string>
-  <string name="notif_message">Raak om te koppel na \'<xliff:g id="device_name">%1$s</xliff:g>\' toe.</string>
+  <string name="app_name">Extensões bluetooth</string>
+  <string name="defaultname">Kit mãos livres</string>
+  <string name="bluetooth_remember_choice">Não pergunte de novo</string>
+  <string name="acceptance_timeout_message">Tempo limite esgotado para aceitar ligação de %1$s</string>
+  <string name="authentication_timeout_message">Tempo limite esgotado para autenticação com  %1$s</string>
+  <string name="notif_ticker">Solicitação de ligação Bluetooth</string>
+  <string name="notif_message">Toque para ligar com \'<xliff:g id="device_name">%1$s</xliff:g>\'.</string>
 </resources>

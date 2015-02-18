@@ -17,6 +17,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="app_name">Bluetooth-extensies</string>
   <string name="defaultname">Carkit</string>
   <string name="bluetooth_remember_choice">Niet meer vragen</string>
   <string name="acceptance_timeout_message">Er is een time-out opgetreden voor het accepteren van de verbinding met %1$s</string>

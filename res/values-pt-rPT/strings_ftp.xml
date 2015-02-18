@@ -31,11 +31,11 @@
  */
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="ftp_session_key_dialog_title">Introduce la clave para la sesión %1$s</string>
-  <string name="ftp_session_key_dialog_header">Se requiere clave de sesión Bluetooth</string>
-  <string name="ftp_notif_title">Solicitud de acceso para FTP</string>
-  <string name="ftp_notif_active_session">Sesión activa de FTP Bluetooth</string>
-  <string name="ftp_notif_connected">Acceso Bluetooth a transferencia de archivos para \u00AB<xliff:g id="device_name">%1$s</xliff:g>\u00BB</string>
-  <string name="bluetooth_ftp_request">Solicitud FTP</string>
-  <string name="bluetooth_ftp_acceptance_dialog_text">%1$s quiere acceder a tus archivos y carpetas. ¿Permitir acceso a %2$s?</string>
+  <string name="ftp_session_key_dialog_title">Introduza a chave de sessão para %1$s</string>
+  <string name="ftp_session_key_dialog_header">Chave de sessão bluetooth necessária</string>
+  <string name="ftp_notif_title">Pedido de chave de sessão para FTP</string>
+  <string name="ftp_notif_active_session">Sessão ativa de Bluetooth FTP</string>
+  <string name="ftp_notif_connected">Permitir o acesso a  \'<xliff:g id="device_name">%1$s</xliff:g>\' para a transferência de ficheiros através do Bluetooth.</string>
+  <string name="bluetooth_ftp_request">Pedido FTP</string>
+  <string name="bluetooth_ftp_acceptance_dialog_text">%1$s gostaria de aceder aos seus ficheiros e pastas. Permitir o acesso a %2$s?</string>
 </resources>
