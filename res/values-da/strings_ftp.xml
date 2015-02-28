@@ -31,6 +31,8 @@
  */
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="ftp_session_key_dialog_title">Angiv sessionsnøgle for %1$s</string>
+  <string name="ftp_session_key_dialog_header">Bluetooth-sessionsnøgle påkrævet</string>
   <string name="ftp_notif_title">Sessionsnøgle-anmodning for FTP</string>
   <string name="ftp_notif_active_session">Aktiv Bluetooth FTP-session</string>
   <string name="ftp_notif_connected">Bluetooth-filoverførsel har adgang til \'<xliff:g id="device_name">%1$s</xliff:g>\'.</string>
