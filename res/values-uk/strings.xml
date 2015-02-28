@@ -17,6 +17,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="app_name">Розширення Bluetooth</string>
   <string name="defaultname">Гучний зв’язок</string>
   <string name="bluetooth_remember_choice">Більше не запитувати</string>
   <string name="acceptance_timeout_message">Перевищено час очікування дозволу підключення до пристрою %1$s</string>
