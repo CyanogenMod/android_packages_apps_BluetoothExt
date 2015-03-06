@@ -17,6 +17,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="app_name">Bluetooth əlavələri</string>
   <string name="defaultname">Yüksək əlaqə</string>
   <string name="bluetooth_remember_choice">Təkrar soruşma</string>
   <string name="acceptance_timeout_message">%1$s tərəfindən gələn bağlantı qəbulu üçün qoyulan vaxt başa çatdı</string>
