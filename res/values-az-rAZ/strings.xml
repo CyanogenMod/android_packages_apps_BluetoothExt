@@ -18,10 +18,10 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="app_name">Bluetooth əlavələri</string>
-  <string name="defaultname">Yüksək əlaqə</string>
+  <string name="defaultname">Avto təchizat</string>
   <string name="bluetooth_remember_choice">Təkrar soruşma</string>
   <string name="acceptance_timeout_message">%1$s tərəfindən gələn bağlantı qəbulu üçün qoyulan vaxt başa çatdı</string>
-  <string name="authentication_timeout_message">%1$s ilə təsdiqləmə üçün qoyulan vaxt başa çatdı</string>
+  <string name="authentication_timeout_message">%1$s ilə səlahiyyətləndirmə üçün qoyulan vaxt başa çatdı</string>
   <string name="notif_ticker">Bluetooth bağlantı sorğusu</string>
   <string name="notif_message">\'<xliff:g id="device_name">%1$s</xliff:g>\' cihazına bağlanmaq üçün toxunun.</string>
 </resources>
