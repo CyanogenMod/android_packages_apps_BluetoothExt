@@ -31,6 +31,8 @@
  */
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="ftp_session_key_dialog_title">%1$s üçün sessiya açarını daxil edin</string>
+  <string name="ftp_session_key_dialog_header">Bluetooth sessiya açarı lazımdır</string>
   <string name="ftp_notif_title">FTP üçün sessiya açarı sorğusu</string>
   <string name="ftp_notif_active_session">Aktiv Bluetooth FTP sessiyası</string>
   <string name="ftp_notif_connected">\'<xliff:g id="device_name">%1$s</xliff:g>\' cihazına Bluetooth fayl köçürmə girişi.</string>
