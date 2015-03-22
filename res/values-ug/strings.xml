@@ -17,11 +17,11 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="app_name">Extensii Bluetooth</string>
-  <string name="defaultname">Kit Mașină</string>
-  <string name="bluetooth_remember_choice">Nu mai întreba din nou</string>
-  <string name="acceptance_timeout_message">Acceptarea conexiunii de la %1$s a expirat</string>
-  <string name="authentication_timeout_message">Autentificarea cu %1$s a expirat</string>
-  <string name="notif_ticker">Cerere de conexiune Bluetooth</string>
-  <string name="notif_message">Atingeți pentru a vă conecta la \'<xliff:g id="device_name">%1$s</xliff:g>\'.</string>
+  <string name="app_name">كۆكچىش كېڭەيتىلمىلىرى</string>
+  <string name="defaultname">ماشىنا يۈرۈشلۈكى</string>
+  <string name="bluetooth_remember_choice">قايتا سورىما</string>
+  <string name="acceptance_timeout_message">%1$s باغلىنىشنى قوبۇل قىلىش ۋاقىت ھالقىدى</string>
+  <string name="authentication_timeout_message">%1$s دەلىللەش ۋاقىت ھالقىدى</string>
+  <string name="notif_ticker">كۆكچىش باغلىنىش ئىلتىماسى</string>
+  <string name="notif_message">بېسىلسا <xliff:g id="device_name">%1$s</xliff:g> غا باغلىنىدۇ.</string>
 </resources>
