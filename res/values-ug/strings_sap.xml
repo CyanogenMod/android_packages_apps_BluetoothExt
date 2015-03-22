@@ -31,6 +31,6 @@
  */
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="bluetooth_sap_request">SAP sorğusu</string>
-  <string name="bluetooth_sap_acceptance_dialog_text">%1$s SIM kartınıza giriş etmək istəyir. %2$s icazə verirsiniz?</string>
+  <string name="bluetooth_sap_request">SAP ئىلتىماسى</string>
+  <string name="bluetooth_sap_acceptance_dialog_text">%1$s سىزنىڭ SIM كارتىڭىزنى زىيارەت قىلماقچى. %2$s نىڭ زىيارىتىگە يول قويامسىز؟</string>
 </resources>
