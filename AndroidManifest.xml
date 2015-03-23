@@ -190,6 +190,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             </intent-filter>
         </service>
 
+        <!--
         <service
             android:process="@string/process"
             android:exported="true"
@@ -203,6 +204,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
                 <action android:name="android.bluetooth.adapter.action.STATE_CHANGED" />
             </intent-filter>
         </receiver>
-
+        -->
     </application>
 </manifest>
