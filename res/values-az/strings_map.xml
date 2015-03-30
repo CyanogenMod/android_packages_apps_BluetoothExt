@@ -32,7 +32,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="map_notif_active_session">Aktiv Bluetooth MAP sessiyası</string>
-  <string name="map_notif_connected">\'<xliff:g id="device_name">%1$s</xliff:g>\' cihazına Bluetooth mesaj girişi.</string>
-  <string name="bluetooth_mas_request">Mesaj girişi sorğusu</string>
-  <string name="bluetooth_mas_acceptance_dialog_text">%1$s mesajlarınıza daxil olmaq istəyir. %2$s icazə verirsiniz?</string>
+  <string name="map_notif_connected">\'<xliff:g id="device_name">%1$s</xliff:g>\' cihazına Bluetooth mesaj müraciəti.</string>
+  <string name="bluetooth_mas_request">Mesaj müraciət sorğusu</string>
+  <string name="bluetooth_mas_acceptance_dialog_text">%1$s mesajlarınıza müraciət etmək istəyir. %2$s icazə verirsiniz?</string>
 </resources>
