@@ -32,5 +32,5 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="bluetooth_sap_request">SAP eskaera</string>
-  <string name="bluetooth_sap_acceptance_dialog_text">%1$s -ek zure SIM-erako sarbidea nahi du. %2$s -ri baimena eman?</string>
+  <string name="bluetooth_sap_acceptance_dialog_text">%1$s -ek zure SIMerako sarbidea nahi du. %2$s -ri baimena eman?</string>
 </resources>
