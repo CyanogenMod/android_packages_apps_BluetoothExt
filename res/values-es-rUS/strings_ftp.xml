@@ -31,8 +31,9 @@
  */
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="ftp_notif_active_session">FTP Bluetooth saio aktiboa</string>
-  <string name="ftp_notif_connected">\u00AB<xliff:g id="device_name">%1$s</xliff:g>\u00BB -raentzat fitxategi transferentziarako Bluetooth sarbidea.</string>
-  <string name="bluetooth_ftp_request">FTP eskaera</string>
-  <string name="bluetooth_ftp_acceptance_dialog_text">%1$s -ek zure fitxategi eta artxiboetarako sarbidea nahi du. %2$s -ri baimena eman?</string>
+  <string name="ftp_notif_title">Solicitud de acceso para FTP</string>
+  <string name="ftp_notif_active_session">Sesión activa de FTP Bluetooth</string>
+  <string name="ftp_notif_connected">Acceso Bluetooth a transferencia de archivos para \u00AB<xliff:g id="device_name">%1$s</xliff:g>\u00BB.</string>
+  <string name="bluetooth_ftp_request">Solicitud FTP</string>
+  <string name="bluetooth_ftp_acceptance_dialog_text">%1$s quiere acceder a tus archivos y carpetas. ¿Permitir acceso a %2$s?</string>
 </resources>
