@@ -31,6 +31,5 @@
  */
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="bluetooth_dun_request">DUN eskaera</string>
   <string name="bluetooth_dun_acceptance_dialog_text">%1$s -ek DUN erabili nahi du. %2$s -ri sarbidea baimendu?</string>
 </resources>
