@@ -17,6 +17,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="defaultname">Kotxerako gailua</string>
   <string name="bluetooth_remember_choice">Ez galdetu berriro</string>
   <string name="session_key_dialog_title">%1$s -rako saio gako bat idatzi</string>
   <string name="session_key_dialog_header">Bluetooth saio gakoa beharrezkoa da</string>
