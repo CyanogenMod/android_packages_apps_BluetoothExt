@@ -31,6 +31,8 @@
  */
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="ftp_session_key_dialog_title">พิมพ์คีย์เซสชันสำหรับ %1$s</string>
+  <string name="ftp_session_key_dialog_header">ต้องการบลูทูธคีย์เซสชัน</string>
   <string name="ftp_notif_title">ต้องการกุญแจเซสซัน FTP</string>
   <string name="ftp_notif_active_session">FTP บลูทูธ เซสซันที่ใช้งาน</string>
   <string name="ftp_notif_connected">ต้องการเข้าถึงไฟล์ทางบลูทูธไปยัง \'<xliff:g id="device_name">%1$s</xliff:g>\'.</string>
