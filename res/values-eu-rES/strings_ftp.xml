@@ -31,6 +31,8 @@
  */
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="ftp_session_key_dialog_title">Idatzi %1$s saio gakoa</string>
+  <string name="ftp_session_key_dialog_header">Bluetooth saio gakoa beharrezkoa da</string>
   <string name="ftp_notif_title">FTP-rako saio gakoa beharrezkoa da</string>
   <string name="ftp_notif_active_session">FTP Bluetooth saio aktiboa</string>
   <string name="ftp_notif_connected">\u00AB<xliff:g id="device_name">%1$s</xliff:g>\u00BB -raentzat fitxategi transferentziarako Bluetooth sarbidea.</string>
