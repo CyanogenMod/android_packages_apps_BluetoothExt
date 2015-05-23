@@ -17,10 +17,11 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="app_name">کشانی بلوتوس</string>
   <string name="defaultname">Carkit</string>
   <string name="bluetooth_remember_choice">جارێکی تر پرسیار مه‌که‌ره‌وه‌</string>
-  <string name="acceptance_timeout_message">ڕه‌زامه‌ند بوون بۆ په‌یوه‌ندی له‌ %1$sـه‌وه‌ کاته‌که‌ی ته‌واوبوو</string>
-  <string name="authentication_timeout_message">ڕه‌سه‌نێتی له‌گه‌ڵ %1$s کاتی نه‌ما</string>
+  <string name="acceptance_timeout_message">ڕه‌زامه‌ند بوون بۆ په‌یوه‌ندی له‌ %١$sـه‌وه‌ کاته‌که‌ی ته‌واوبوو</string>
+  <string name="authentication_timeout_message">ڕه‌سه‌نێتی له‌گه‌ڵ %١$s کاتی نه‌ما</string>
   <string name="notif_ticker">داواکاری په‌یوه‌ندی بلوتوس</string>
-  <string name="notif_message">په‌نجه‌ پێدابنێ بۆ په‌یوه‌ندی کردن به‌ \'<xliff:g id="device_name">%1$s</xliff:g>\'.</string>
+  <string name="notif_message">په‌نجه‌ پێدابنێ بۆ په‌یوه‌ندی کردن به‌ \'<xliff:g id="device_name">%١$s</xliff:g>\'.</string>
 </resources>
