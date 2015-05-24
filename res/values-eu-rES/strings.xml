@@ -17,10 +17,11 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="app_name">Bluetooth luzapenak</string>
   <string name="defaultname">Kotxerako gailua</string>
   <string name="bluetooth_remember_choice">Ez galdetu berriro</string>
-  <string name="acceptance_timeout_message">%1$s -rekiko konexiorako itxarote denbora bukatu da</string>
-  <string name="authentication_timeout_message">%1$s -rekiko egiaztapenaren itxarote denbora bukatu da</string>
+  <string name="acceptance_timeout_message">%1$s-k konexioa onartzeko denbora-muga gainditu da</string>
+  <string name="authentication_timeout_message">%1$s autentifikazio denbora muga gainditu da</string>
   <string name="notif_ticker">Bluetooth konexio eskaera</string>
   <string name="notif_message">Sakatu <xliff:g id="device_name">%1$s</xliff:g> -rekin konektatzeko.</string>
 </resources>
