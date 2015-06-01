@@ -17,6 +17,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="app_name">کشانی بلوتوس</string>
   <string name="defaultname">Carkit</string>
   <string name="bluetooth_remember_choice">جارێکی تر پرسیار مه‌که‌ره‌وه‌</string>
   <string name="acceptance_timeout_message">ڕه‌زامه‌ند بوون بۆ په‌یوه‌ندی له‌ %1$sـه‌وه‌ کاته‌که‌ی ته‌واوبوو</string>
