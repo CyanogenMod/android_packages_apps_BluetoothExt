@@ -32,4 +32,5 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="bluetooth_dun_request">DUN peto</string>
+  <string name="bluetooth_dun_acceptance_dialog_text">%1$s deziras uzi DUN. Ĉu permesi aliron al %2$s?</string>
 </resources>
