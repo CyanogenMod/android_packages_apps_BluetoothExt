@@ -32,4 +32,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="map_notif_active_session">Bludenta MAP sesio aktiva</string>
+  <string name="map_notif_connected">Bludenta mesaĝo aliras al \'<xliff:g id="device_name">%1$s</xliff:g>\'.</string>
+  <string name="bluetooth_mas_request">Peto de atingo de mesaĝo</string>
+  <string name="bluetooth_mas_acceptance_dialog_text">%1$s deziras atingi viajn mesaĝojn. Ĉu permesi aliron al %2$s?</string>
 </resources>

@@ -19,6 +19,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="app_name">Bludentaj kromprogramoj</string>
   <string name="defaultname">Aŭta ilaro</string>
+  <string name="bluetooth_remember_choice">Ne demandi denove</string>
   <string name="acceptance_timeout_message">Eltempiĝo de la konekto de %1$s</string>
   <string name="authentication_timeout_message">Eltempiĝo de la aŭtentokontrolo de %1$s</string>
   <string name="notif_ticker">Peto de bludenta konekto</string>
