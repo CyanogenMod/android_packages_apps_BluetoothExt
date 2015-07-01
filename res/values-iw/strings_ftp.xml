@@ -31,7 +31,7 @@
  */
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="ftp_session_key_dialog_title">הקלד קוד הפעלה עבור %1$s</string>
+  <string name="ftp_session_key_dialog_title">הקלד מפתח הפעלה עבור %1$s</string>
   <string name="ftp_session_key_dialog_header">קוד הפעלת Bluetooth דרוש</string>
   <string name="ftp_notif_title">מפתח דרוש להפעלת FTP</string>
   <string name="ftp_notif_active_session">Bluetooth FTP פעיל</string>
