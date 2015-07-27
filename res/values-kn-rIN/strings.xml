@@ -17,11 +17,11 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="app_name">ملحقات البلوتوث</string>
-  <string name="defaultname">كركيت</string>
-  <string name="bluetooth_remember_choice">لا تسأل مرة أخرى</string>
-  <string name="acceptance_timeout_message">مهلة قبول اتصال انتهت من %1$s</string>
-  <string name="authentication_timeout_message">انتهت مهلة المصادقة مع %1$s</string>
-  <string name="notif_ticker">طلب اتصال Bluetooth</string>
-  <string name="notif_message">اللمس الاتصال بي \'<xliff:g id="device_name">%1$s</xliff:g>\'.</string>
+  <string name="app_name">ಬ್ಲೂಟೂತ್ ವಿಸ್ತರಣೆಗಳು</string>
+  <string name="defaultname">ಕಾರ್‍ಕಿಟ್</string>
+  <string name="bluetooth_remember_choice">ಇನ್ನೊಮ್ಮೆ ಕೇಳಬೇಡ</string>
+  <string name="acceptance_timeout_message">%1$sನಿಂದ ಸಂಪರ್ಕದ ಅಂಗೀಕಾರದ ಅವಧಿಯು ಮುಗಿದಿದೆ</string>
+  <string name="authentication_timeout_message">%1$s ಜೊತೆಗಿನ ದೃಢೀಕರಣ ಅವಧಿಯು ಮುಗಿದಿದೆ</string>
+  <string name="notif_ticker">ಬ್ಲೂಟೂತ್ ಸಂಪರ್ಕ್ ಕೋರಿಕೆ</string>
+  <string name="notif_message">\'<xliff:g id="device_name">%1$s</xliff:g>\'ಗೆ ಸಂಪರ್ಕಿಸಲು ಸ್ಪರ್ಶಿಸಿ.</string>
 </resources>
