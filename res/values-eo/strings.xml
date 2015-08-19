@@ -17,11 +17,11 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="app_name">Bluetooth-tillägg</string>
-  <string name="defaultname">Car Kit</string>
-  <string name="bluetooth_remember_choice">Fråga inte igen</string>
-  <string name="acceptance_timeout_message">Tidsgräns uppnådd för godkännande av anslutning från %1$s</string>
-  <string name="authentication_timeout_message">Tidsgräns uppnådd för autentisering med %1$s</string>
-  <string name="notif_ticker">Begäran om bluetoothanslutning</string>
-  <string name="notif_message">Tryck för att ansluta till \'<xliff:g id="device_name">%1$s</xliff:g>\'.</string>
+  <string name="app_name">Bludentaj kromprogramoj</string>
+  <string name="defaultname">Aŭta ilaro</string>
+  <string name="bluetooth_remember_choice">Ne demandi denove</string>
+  <string name="acceptance_timeout_message">Eltempiĝo de la konekto de %1$s</string>
+  <string name="authentication_timeout_message">Eltempiĝo de la aŭtentokontrolo de %1$s</string>
+  <string name="notif_ticker">Peto de Bludenta konekto</string>
+  <string name="notif_message">Tuŝu por konektiĝi al \'<xliff:g id="device_name">%1$s</xliff:g>\'.</string>
 </resources>

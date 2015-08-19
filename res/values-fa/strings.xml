@@ -17,5 +17,11 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="app_name">موارد اضافی بلوتوث</string>
+  <string name="defaultname">کیت خودرو</string>
   <string name="bluetooth_remember_choice">دوباره نپرس</string>
+  <string name="acceptance_timeout_message">مهلت پذیرش ارتباط %1$s پایان یافت</string>
+  <string name="authentication_timeout_message">مهلت تأیید اعتبار %1$s پایان یافت</string>
+  <string name="notif_ticker">درخواست اتصال بلوتوث</string>
+  <string name="notif_message">لمس کنید تا به <xliff:g id="device_name">%1$s</xliff:g> متصل شوید.</string>
 </resources>

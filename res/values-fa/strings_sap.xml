@@ -32,4 +32,5 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="bluetooth_sap_request">درخواست SAP</string>
+  <string name="bluetooth_sap_acceptance_dialog_text">%1$s به سیم کارت شما دسترسی پیدا می کند. به %2$s اجازه می دهید؟</string>
 </resources>

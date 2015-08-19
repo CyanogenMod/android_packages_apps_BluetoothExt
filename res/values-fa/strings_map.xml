@@ -32,4 +32,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="map_notif_active_session">جلسه فعال MAP بلوتوث</string>
+  <string name="map_notif_connected">پیام بلوتوث به \'<xliff:g id="device_name">%1$s</xliff:g>\' دسترسی پیدا می کند.</string>
+  <string name="bluetooth_mas_request">پیام درخواست دسترسی</string>
+  <string name="bluetooth_mas_acceptance_dialog_text">%1$s به پیامهای شما دسترسی پیدا می کند. به %2$s اجازه می دهید؟</string>
 </resources>
