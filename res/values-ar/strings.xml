@@ -17,6 +17,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="app_name">ملحقات Bluetooth</string>
   <string name="defaultname">كركيت</string>
   <string name="bluetooth_remember_choice">لا تسأل مرة أخرى</string>
   <string name="acceptance_timeout_message">مهلة قبول اتصال انتهت من %1$s</string>

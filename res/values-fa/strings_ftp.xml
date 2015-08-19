@@ -31,11 +31,11 @@
  */
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="ftp_session_key_dialog_title">اكتب مفتاح الجلسة ل %1$s</string>
-  <string name="ftp_session_key_dialog_header">مطلوب مفتاح جلسة Bluetooth</string>
-  <string name="ftp_notif_title">طلب مفتاح الجلسة لي FTP</string>
-  <string name="ftp_notif_active_session">جلسة العمل النشطة FTP Bluetooth</string>
-  <string name="ftp_notif_connected">بلوتوث نقل الوصول إلى الملف \'<xliff:g id="device_name">%1$s</xliff:g>\'.</string>
-  <string name="bluetooth_ftp_request">FTP مطلوب</string>
-  <string name="bluetooth_ftp_acceptance_dialog_text">%1$s ترغب في الوصول إلى الملفات والمجلدات الخاصة بك. منح حق الوصول إلى %2$s؟</string>
+  <string name="ftp_session_key_dialog_title">کلید %1$s را تایپ کنید</string>
+  <string name="ftp_session_key_dialog_header">نیاز به کلید تایید بلوتوث</string>
+  <string name="ftp_notif_title">درخواست کلید تایید برای FTP</string>
+  <string name="ftp_notif_active_session">FTP بلوتوث فعال است</string>
+  <string name="ftp_notif_connected">انتقال دهنده ی فایل بلوتوث به \' <xliff:g id="device_name">%1$s\'. </xliff:g> دسترسی دارد.</string>
+  <string name="bluetooth_ftp_request">درخواست FTP</string>
+  <string name="bluetooth_ftp_acceptance_dialog_text">%1$s می خواهد به فایل ها و پوشه های شما دسترسی پیدا کند. به %2$s اجازه می دهید؟</string>
 </resources>
