@@ -17,6 +17,5 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="defaultname">کیت خودرو</string>
-  <string name="bluetooth_remember_choice">دوباره نپرس</string>
+  <string name="notif_ticker">Peto de Bludenta konekto</string>
 </resources>
