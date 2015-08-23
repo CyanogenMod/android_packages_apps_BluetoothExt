@@ -31,5 +31,8 @@
  */
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="map_notif_active_session">MAP بلوتوث فعال است</string>
+  <string name="map_notif_active_session">Dejavna seja Bluetooth MAP</string>
+  <string name="map_notif_connected">Dostop sporočil Bluetooth do \'<xliff:g id="device_name">%1$s</xliff:g>\'.</string>
+  <string name="bluetooth_mas_request">Zahteva za dostop do sporočil</string>
+  <string name="bluetooth_mas_acceptance_dialog_text">%1$s bi rad dostopal do vaših sporočil. Omogoči dostop do %2$s?</string>
 </resources>

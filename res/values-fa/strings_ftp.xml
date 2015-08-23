@@ -31,5 +31,5 @@
  */
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="ftp_notif_title">درخواست کلید جلسه برای FTP</string>
+  <string name="ftp_notif_title">درخواست کلید تایید برای FTP</string>
 </resources>
