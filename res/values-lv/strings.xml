@@ -17,6 +17,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="app_name">Bluetooth paplašinājumi</string>
   <string name="defaultname">Autokopa</string>
   <string name="bluetooth_remember_choice">Turpmāk nejautāt</string>
   <string name="acceptance_timeout_message">Savienojuma pieņemšanai no %1$s iestājās noildze</string>
