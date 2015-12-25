@@ -31,6 +31,8 @@
  */
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="ftp_session_key_dialog_title">Escriba a clave de sesión para %1$s</string>
+  <string name="ftp_session_key_dialog_header">É precisa unha clave de sesión Bluetooth</string>
   <string name="ftp_notif_title">Necesaria clave de sesión para FTP</string>
   <string name="ftp_notif_active_session">Sesión de Bluetooth FTP activa</string>
   <string name="ftp_notif_connected">Acceso Bluetooth a transferencia de ficheiros para  <xliff:g id="device_name">%1$s</xliff:g>.</string>
