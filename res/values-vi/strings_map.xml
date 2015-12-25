@@ -31,8 +31,5 @@
  */
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="map_notif_active_session">Phiên Bluetooth MAP hiện hoạt</string>
   <string name="map_notif_connected">Quyền truy cập thông báo Bluetooth cho \'<xliff:g id="device_name">%1$s</xliff:g>\'.</string>
-  <string name="bluetooth_mas_request">Yêu cầu truy cập tin nhắn</string>
-  <string name="bluetooth_mas_acceptance_dialog_text">%1$s muốn truy cập tin nhắn của bạn. Cho phép %2$s truy cập?</string>
 </resources>
