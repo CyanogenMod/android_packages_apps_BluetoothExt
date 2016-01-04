@@ -17,11 +17,11 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="app_name">ملحقات البلوتوث</string>
-  <string name="defaultname">كركيت</string>
-  <string name="bluetooth_remember_choice">لا تسأل مرة أخرى</string>
-  <string name="acceptance_timeout_message">مهلة قبول اتصال انتهت من %1$s</string>
-  <string name="authentication_timeout_message">انتهت مهلة المصادقة مع %1$s</string>
-  <string name="notif_ticker">طلب اتصال Bluetooth</string>
-  <string name="notif_message">اللمس للاتصال بي \'<xliff:g id="device_name">%1$s</xliff:g>\'.</string>
+  <string name="app_name">Tiện ích mở rộng Bluetooth</string>
+  <string name="defaultname">Carkit</string>
+  <string name="bluetooth_remember_choice">Đừng hỏi lại</string>
+  <string name="acceptance_timeout_message">Đã hết thời gian chấp nhận kết nối từ %1$s</string>
+  <string name="authentication_timeout_message">Hết thời gian xác thực với %1$s</string>
+  <string name="notif_ticker">Yêu cầu kết nối Bluetooth</string>
+  <string name="notif_message">Chạm để kết nối với \'<xliff:g id="device_name">%1$s</xliff:g>\'.</string>
 </resources>
