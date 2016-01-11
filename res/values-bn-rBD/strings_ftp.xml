@@ -31,6 +31,8 @@
  */
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="ftp_session_key_dialog_title">%1$s এর জন্য অধিবেশন কী লিখুন</string>
+  <string name="ftp_session_key_dialog_header">ব্লু-টুথ অধিবেশন কী প্রয়োজন</string>
   <string name="ftp_notif_title">FTP অধিবেশনের জন্য কী অনুরোধ</string>
   <string name="ftp_notif_active_session">ব্লু-টুথ FTP সক্রিয় অধিবেশন</string>
   <string name="ftp_notif_connected">ব্লু-টুথ ফাইল ট্রান্সফার প্রবেশাধিকার দিন \'<xliff:g id="device_name">%1$s</xliff:g>\'।</string>

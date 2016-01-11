@@ -37,5 +37,5 @@
   <string name="ftp_notif_active_session">Aktif Bluetooth FTP oturumu</string>
   <string name="ftp_notif_connected">\'<xliff:g id="device_name">%1$s</xliff:g>\' cihazına Bluetooth dosya aktarım erişimi.</string>
   <string name="bluetooth_ftp_request">FTP isteği</string>
-  <string name="bluetooth_ftp_acceptance_dialog_text">%1$s  klasörlerinize ve dosyalarınıza ulaşmak istiyor. %2$s izin verecek misiniz?</string>
+  <string name="bluetooth_ftp_acceptance_dialog_text">%1$s klasörlerinize ve dosyalarınıza ulaşmak istiyor. %2$s için izin verecek misiniz?</string>
 </resources>

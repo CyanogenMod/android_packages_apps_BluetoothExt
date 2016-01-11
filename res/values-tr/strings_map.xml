@@ -34,5 +34,5 @@
   <string name="map_notif_active_session">Aktif Bluetooth MAP oturumu</string>
   <string name="map_notif_connected">\'<xliff:g id="device_name">%1$s</xliff:g>\' cihazına Bluetooth mesaj erişimi.</string>
   <string name="bluetooth_mas_request">Mesaj erişim isteği</string>
-  <string name="bluetooth_mas_acceptance_dialog_text">%1$s  mesajlarınıza ulaşmak istiyor. %2$s izin verecek misiniz?</string>
+  <string name="bluetooth_mas_acceptance_dialog_text">%1$s mesajlarınıza ulaşmak istiyor. %2$s kişisine izin verecek misiniz?</string>
 </resources>
