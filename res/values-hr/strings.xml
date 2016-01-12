@@ -17,6 +17,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="app_name">Bluetooth proširenja</string>
   <string name="defaultname">Pribor za automobil</string>
   <string name="bluetooth_remember_choice">Ne pitaj ponovno</string>
   <string name="acceptance_timeout_message">Vrijeme za prihvaćanje veze sa %1$s je isteklo</string>
