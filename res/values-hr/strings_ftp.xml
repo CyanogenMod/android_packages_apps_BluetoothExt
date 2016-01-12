@@ -31,6 +31,8 @@
  */
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="ftp_session_key_dialog_title">Unesite šifru sesije za %1$s</string>
+  <string name="ftp_session_key_dialog_header">Potreban je šifra za Bluetooth sesiju</string>
   <string name="ftp_notif_title">Zahtjev šifre sesije za FTP</string>
   <string name="ftp_notif_active_session">Bluetooth FTP aktivna sesija</string>
   <string name="ftp_notif_connected">Bluetooth pristup za prijenos podataka prema \'<xliff:g id="device_name">%1$s</xliff:g>\'.</string>
