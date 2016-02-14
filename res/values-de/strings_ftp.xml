@@ -32,10 +32,10 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="ftp_session_key_dialog_title">Sitzungsschlüssel für %1$s eingeben</string>
-  <string name="ftp_session_key_dialog_header">Bluetooth-Sitzungsschlüssel benötigt</string>
-  <string name="ftp_notif_title">Sitzungsschlüssel-Anfrage für Dateizugriff</string>
+  <string name="ftp_session_key_dialog_header">Bluetooth-Sitzungsschlüssel erforderlich</string>
+  <string name="ftp_notif_title">Sitzungsschlüssel-Anfrage für FTP</string>
   <string name="ftp_notif_active_session">Bluetooth-Dateizugriff aktiv</string>
-  <string name="ftp_notif_connected">Bluetooth-Dateizugriff auf \"<xliff:g id="device_name">%1$s</xliff:g>\"</string>
-  <string name="bluetooth_ftp_request">Anfrage für Dateizugriff</string>
-  <string name="bluetooth_ftp_acceptance_dialog_text">%1$s möchte auf ihre Dateien und Ordner zugreifen. Erlauben?</string>
+  <string name="ftp_notif_connected">Dateiübertragungszugriff auf \"<xliff:g id="device_name">%1$s</xliff:g>\" durch Bluetooth.</string>
+  <string name="bluetooth_ftp_request">FTP-Anfrage</string>
+  <string name="bluetooth_ftp_acceptance_dialog_text">%1$s möchte auf Ihre Dateien und Ordner zugreifen. Erlauben?</string>
 </resources>
