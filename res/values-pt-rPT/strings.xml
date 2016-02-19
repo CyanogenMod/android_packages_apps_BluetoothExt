@@ -20,8 +20,8 @@
   <string name="app_name">Extensões bluetooth</string>
   <string name="defaultname">Kit mãos livres</string>
   <string name="bluetooth_remember_choice">Não perguntar de novo</string>
-  <string name="acceptance_timeout_message">Tempo limite esgotado para aceitar ligação de %1$s</string>
-  <string name="authentication_timeout_message">Tempo limite esgotado para autenticação com  %1$s</string>
+  <string name="acceptance_timeout_message">Tempo limite para aceitar ligação de %1$s esgotado</string>
+  <string name="authentication_timeout_message">Tempo limite para autenticação com %1$s esgotado</string>
   <string name="notif_ticker">Pedido para ligação do bluetooth</string>
   <string name="notif_message">Toque para ligar a \'<xliff:g id="device_name">%1$s</xliff:g>\'.</string>
 </resources>
