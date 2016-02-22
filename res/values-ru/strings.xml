@@ -20,8 +20,8 @@
   <string name="app_name">Расширения Bluetooth</string>
   <string name="defaultname">Громкая связь</string>
   <string name="bluetooth_remember_choice">Больше не спрашивать</string>
-  <string name="acceptance_timeout_message">Превышено время ожидания разрешения подключения к устройству «%1$s»</string>
-  <string name="authentication_timeout_message">Превышено время ожидания аутентификации на устройстве «%1$s»</string>
+  <string name="acceptance_timeout_message">Время ожидания подтверждения для подключения к устройству «%1$s» истекло</string>
+  <string name="authentication_timeout_message">Время ожидания аутентификации на устройстве «%1$s» истекло</string>
   <string name="notif_ticker">Запрос разрешения Bluetooth</string>
   <string name="notif_message">Нажмите для аутентификации устройства «<xliff:g id="device_name">%1$s</xliff:g>»</string>
 </resources>

@@ -32,7 +32,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="map_notif_active_session">Aktiv MAP-session via Bluetooth</string>
-  <string name="map_notif_connected">Meddelandetillgång över Bluetooth till \'<xliff:g id="device_name">%1$s</xliff:g>\'.</string>
+  <string name="map_notif_connected">Bluetooth meddelande har tillgång till \'<xliff:g id="device_name">%1$s</xliff:g>\'.</string>
   <string name="bluetooth_mas_request">Begäran om meddelandetillgång</string>
   <string name="bluetooth_mas_acceptance_dialog_text">%1$s skulle vilja få tillgång till dina meddelanden. Ge tillgång till %2$s?</string>
 </resources>
