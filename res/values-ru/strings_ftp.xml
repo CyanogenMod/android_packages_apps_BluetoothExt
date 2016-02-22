@@ -33,7 +33,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="ftp_session_key_dialog_title">Введите ключ сессии для «%1$s»</string>
   <string name="ftp_session_key_dialog_header">Требуется ключ сессии Bluetooth</string>
-  <string name="ftp_notif_title">Требуется ключ сессии для обмена файлами</string>
+  <string name="ftp_notif_title">Для обмена файлами требуется ключ сеанса</string>
   <string name="ftp_notif_active_session">Активна Bluetooth-сессия обмена файлами</string>
   <string name="ftp_notif_connected">Устройство «<xliff:g id="device_name">%1$s</xliff:g>» подключено.</string>
   <string name="bluetooth_ftp_request">Запрос разрешения для обмена файлами</string>
