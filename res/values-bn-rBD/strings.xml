@@ -19,9 +19,12 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="app_name">ব্লু-টুথ ব্যাপ্তি</string>
   <string name="defaultname">কার কিট</string>
+  <!-- Do not translate. android:process of this application. -->
+  <!-- Bluetooth FTP or MAP permission Alert Activity checkbox text [CHAR LIMIT=none] -->
   <string name="bluetooth_remember_choice">আর জিজ্ঞাসা করবেন না</string>
   <string name="acceptance_timeout_message">%1$s এর থেকে সংযোগ গ্রহণের সময় শেষ হয়েছে</string>
   <string name="authentication_timeout_message">%1$s এর সঙ্গে অনুমোদনের সময় শেষ হয়েছে</string>
+  <!-- Notification message when a Bluetooth device wants to pair with us -->
   <string name="notif_ticker">ব্লু-টুথ সংযোগের অনুরোধ</string>
   <string name="notif_message">\'<xliff:g id="device_name">%1$s</xliff:g>\' এর সঙ্গে সংযোগের জন্যে স্পর্শ করুন।</string>
 </resources>

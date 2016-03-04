@@ -19,9 +19,12 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="app_name">Επεκτάσεις Bluetooth</string>
   <string name="defaultname">Κιτ αυτοκινήτου</string>
+  <!-- Do not translate. android:process of this application. -->
+  <!-- Bluetooth FTP or MAP permission Alert Activity checkbox text [CHAR LIMIT=none] -->
   <string name="bluetooth_remember_choice">Να μην ερωτηθώ ξανά</string>
   <string name="acceptance_timeout_message">Το χρονικό όριο για την αποδοχή της σύνδεσης με το %1$s έληξε</string>
   <string name="authentication_timeout_message">Το χρονικό όριο της πιστοποίησης με το %1$s έληξε</string>
+  <!-- Notification message when a Bluetooth device wants to pair with us -->
   <string name="notif_ticker">Αίτημα σύνδεσης Bluetooth</string>
   <string name="notif_message">Πιέστε για να συνδεθείτε με το \'<xliff:g id="device_name">%1$s</xliff:g>\'.</string>
 </resources>

@@ -31,6 +31,8 @@
  */
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- Activity label of BluetoothSapPermissionActivity, also used as Strings in the permission dialog [CHAR LIMIT=none] -->
   <string name="bluetooth_sap_request">Αίτημα πρόσβασης SIM</string>
+  <!-- Bluetooth SAP permission Alert Activity text [CHAR LIMIT=none] -->
   <string name="bluetooth_sap_acceptance_dialog_text">Το %1$s ζητά πρόσβαση στην κάρτα SIM σας. Να επιτραπεί η πρόσβαση στο %2$s;</string>
 </resources>

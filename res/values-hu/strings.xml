@@ -19,9 +19,12 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="app_name">Bluetooth kiterjesztések</string>
   <string name="defaultname">Kihangosító</string>
+  <!-- Do not translate. android:process of this application. -->
+  <!-- Bluetooth FTP or MAP permission Alert Activity checkbox text [CHAR LIMIT=none] -->
   <string name="bluetooth_remember_choice">Ne kérdezze újra</string>
   <string name="acceptance_timeout_message">Az elfogadás időtúllépésre futott a következővel: %1$s</string>
   <string name="authentication_timeout_message">A hitelesítés időtúllépésre futott a következővel: %1$s</string>
+  <!-- Notification message when a Bluetooth device wants to pair with us -->
   <string name="notif_ticker">Bluetooth csatlakozási kérelem</string>
   <string name="notif_message">Érintse meg a csatlakozáshoz a következővel: \"<xliff:g id="device_name">%1$s</xliff:g>\".</string>
 </resources>

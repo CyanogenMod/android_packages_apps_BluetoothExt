@@ -19,9 +19,12 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="app_name">Bluetooth拡張機能</string>
   <string name="defaultname">カーキット</string>
+  <!-- Do not translate. android:process of this application. -->
+  <!-- Bluetooth FTP or MAP permission Alert Activity checkbox text [CHAR LIMIT=none] -->
   <string name="bluetooth_remember_choice">次回から表示しない</string>
   <string name="acceptance_timeout_message">%1$sからの接続の受け入れがタイムアウトしました</string>
   <string name="authentication_timeout_message">%1$sとの認証がタイムアウトしました</string>
+  <!-- Notification message when a Bluetooth device wants to pair with us -->
   <string name="notif_ticker">Bluetooth接続リクエスト</string>
   <string name="notif_message">タップすると｢<xliff:g id="device_name">%1$s</xliff:g>｣に接続します。</string>
 </resources>

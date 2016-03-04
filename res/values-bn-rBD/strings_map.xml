@@ -31,8 +31,12 @@
  */
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!--Notification Title for ACTIVE SESSION -->
   <string name="map_notif_active_session">ব্লু-টুথ মানচিত্র সক্রিয় অধিবেশন</string>
+  <!--Notification message for ACTIVE SESSION -->
   <string name="map_notif_connected">ব্লু-টুথ বার্তা প্রবেশাধিকার \'<xliff:g id="device_name">%1$s</xliff:g>\'.</string>
+  <!-- Activity label of BluetoothMasPermissionActivity, also used as Strings in the permission dialog [CHAR LIMIT=none] -->
   <string name="bluetooth_mas_request">বার্তা প্রবেশাধিকার অনুরোধ</string>
+  <!-- Bluetooth MAS permission Alert Activity text [CHAR LIMIT=none] -->
   <string name="bluetooth_mas_acceptance_dialog_text">%1$s আপনার বার্তাসমূহের প্রবেশাধিকার দিতে চান। %2$s প্রবেশাধিকার দিতে?</string>
 </resources>

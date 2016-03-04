@@ -19,9 +19,12 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="app_name">Extensiones de Bluetooth</string>
   <string name="defaultname">Kit de automóvil</string>
+  <!-- Do not translate. android:process of this application. -->
+  <!-- Bluetooth FTP or MAP permission Alert Activity checkbox text [CHAR LIMIT=none] -->
   <string name="bluetooth_remember_choice">No preguntar de nuevo</string>
   <string name="acceptance_timeout_message">Terminó el tiempo de espera para la conexión con %1$s</string>
   <string name="authentication_timeout_message">Terminó el tiempo de espera para autenticación con %1$s</string>
+  <!-- Notification message when a Bluetooth device wants to pair with us -->
   <string name="notif_ticker">Solicitud de conexión Bluetooth</string>
   <string name="notif_message">Toca para conectarte a \'<xliff:g id="device_name">%1$s</xliff:g>\'.</string>
 </resources>
