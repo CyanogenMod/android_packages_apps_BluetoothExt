@@ -33,9 +33,14 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="ftp_session_key_dialog_title">%1$s üçün sessiya açarını daxil edin</string>
   <string name="ftp_session_key_dialog_header">Bluetooth sessiya açarı lazımdır</string>
+  <!-- Notification title when a Bluetooth device wants to pair with us -->
   <string name="ftp_notif_title">FTP üçün sessiya açarı sorğusu</string>
+  <!--Notification Title for ACTIVE SESSION -->
   <string name="ftp_notif_active_session">Aktiv Bluetooth FTP sessiyası</string>
+  <!--Notification message for ACTIVE SESSION -->
   <string name="ftp_notif_connected">\'<xliff:g id="device_name">%1$s</xliff:g>\' cihazına Bluetooth fayl köçürmə müraciəti.</string>
+  <!-- Activity label of BluetoothFtpPermissionActivity, also used as Strings in the permission dialog [CHAR LIMIT=none] -->
   <string name="bluetooth_ftp_request">FTP sorğusu</string>
+  <!-- Bluetooth FTP permission Alert Activity text [CHAR LIMIT=none] -->
   <string name="bluetooth_ftp_acceptance_dialog_text">%1$s fayl və qovluqlarınıza müraciət etmək istəyir. %2$s icazə verirsiniz?</string>
 </resources>
