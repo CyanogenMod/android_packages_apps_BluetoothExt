@@ -33,9 +33,14 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="ftp_session_key_dialog_title">کلید %1$s را تایپ کنید</string>
   <string name="ftp_session_key_dialog_header">نیاز به کلید تایید بلوتوث</string>
+  <!-- Notification title when a Bluetooth device wants to pair with us -->
   <string name="ftp_notif_title">درخواست کلید تایید برای FTP</string>
+  <!--Notification Title for ACTIVE SESSION -->
   <string name="ftp_notif_active_session">FTP بلوتوث فعال است</string>
+  <!--Notification message for ACTIVE SESSION -->
   <string name="ftp_notif_connected">انتقال‌دهنده‌ی فایل بلوتوث به \' <xliff:g id="device_name">%1$s\'. </xliff:g> دسترسی دارد.</string>
+  <!-- Activity label of BluetoothFtpPermissionActivity, also used as Strings in the permission dialog [CHAR LIMIT=none] -->
   <string name="bluetooth_ftp_request">درخواست FTP</string>
+  <!-- Bluetooth FTP permission Alert Activity text [CHAR LIMIT=none] -->
   <string name="bluetooth_ftp_acceptance_dialog_text">%1$s می‌خواهد به فایل‌ها و پوشه‌های شما دسترسی پیدا کند. به %2$s اجازه می‌دهید؟</string>
 </resources>

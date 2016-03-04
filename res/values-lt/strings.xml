@@ -19,9 +19,12 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="app_name">„Bluetooth“ plėtiniai</string>
   <string name="defaultname">Laisvų rankų įranga</string>
+  <!-- Do not translate. android:process of this application. -->
+  <!-- Bluetooth FTP or MAP permission Alert Activity checkbox text [CHAR LIMIT=none] -->
   <string name="bluetooth_remember_choice">Daugiau neklausti</string>
   <string name="acceptance_timeout_message">Baigėsi ryšio iš %1$s priėmimo laikas</string>
   <string name="authentication_timeout_message">Baigėsi autentikavimosi su %1$s laikas</string>
+  <!-- Notification message when a Bluetooth device wants to pair with us -->
   <string name="notif_ticker">„Bluetooth“ ryšio užklausa</string>
   <string name="notif_message">Palieskite, kad prisijungtumėte prie „<xliff:g id="device_name">%1$s</xliff:g>“.</string>
 </resources>

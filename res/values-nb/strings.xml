@@ -19,9 +19,12 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="app_name">Bluetooth-utvidelser</string>
   <string name="defaultname">Bilkit</string>
+  <!-- Do not translate. android:process of this application. -->
+  <!-- Bluetooth FTP or MAP permission Alert Activity checkbox text [CHAR LIMIT=none] -->
   <string name="bluetooth_remember_choice">Ikke spør igjen</string>
   <string name="acceptance_timeout_message">Aksept av tilkobling fra %1$s ble tidsavbrutt</string>
   <string name="authentication_timeout_message">Godkjenning med %1$s ble tidsavbrutt</string>
+  <!-- Notification message when a Bluetooth device wants to pair with us -->
   <string name="notif_ticker">Bluetooth-tilkoblingen</string>
   <string name="notif_message">Trykk for å koble til \' <xliff:g id="device_name"> %1$s\'. </xliff:g>\'.</string>
 </resources>

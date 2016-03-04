@@ -31,6 +31,8 @@
  */
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- Activity label of BluetoothSapPermissionActivity, also used as Strings in the permission dialog [CHAR LIMIT=none] -->
   <string name="bluetooth_sap_request">SAP 요청</string>
+  <!-- Bluetooth SAP permission Alert Activity text [CHAR LIMIT=none] -->
   <string name="bluetooth_sap_acceptance_dialog_text">%1$s이(가) SIM에 접근하려고 합니다. %2$s의 접근을 허용할까요?</string>
 </resources>

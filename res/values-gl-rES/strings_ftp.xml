@@ -33,9 +33,14 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="ftp_session_key_dialog_title">Escriba a clave de sesión para %1$s</string>
   <string name="ftp_session_key_dialog_header">É precisa unha clave de sesión Bluetooth</string>
+  <!-- Notification title when a Bluetooth device wants to pair with us -->
   <string name="ftp_notif_title">Necesaria clave de sesión para FTP</string>
+  <!--Notification Title for ACTIVE SESSION -->
   <string name="ftp_notif_active_session">Sesión de Bluetooth FTP activa</string>
+  <!--Notification message for ACTIVE SESSION -->
   <string name="ftp_notif_connected">Acceso Bluetooth a transferencia de ficheiros para  <xliff:g id="device_name">%1$s</xliff:g>.</string>
+  <!-- Activity label of BluetoothFtpPermissionActivity, also used as Strings in the permission dialog [CHAR LIMIT=none] -->
   <string name="bluetooth_ftp_request">Solicitude FTP</string>
+  <!-- Bluetooth FTP permission Alert Activity text [CHAR LIMIT=none] -->
   <string name="bluetooth_ftp_acceptance_dialog_text">%1$s quere acceder aos teus ficheiros e cartafois. Permitir acceso a %2$s?</string>
 </resources>

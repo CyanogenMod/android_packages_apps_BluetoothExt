@@ -18,9 +18,12 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="defaultname">රථකට්ටලය</string>
+  <!-- Do not translate. android:process of this application. -->
+  <!-- Bluetooth FTP or MAP permission Alert Activity checkbox text [CHAR LIMIT=none] -->
   <string name="bluetooth_remember_choice">නැවත අහන්න එපා</string>
   <string name="acceptance_timeout_message">%1$s වෙතින් සම්බන්ධය පිළිගැනීම කල්ඉකුත් විය</string>
   <string name="authentication_timeout_message">%1$s සමඟ සත්‍යාපනය කල්ඉකුත් විය</string>
+  <!-- Notification message when a Bluetooth device wants to pair with us -->
   <string name="notif_ticker">බ්ලූටූත් සම්බන්ධය අයැදීම</string>
   <string name="notif_message">\'<xliff:g id="device_name">%1$s</xliff:g>\' වෙත සම්බන්ධකිරීමට ස්පර්ශ කරන්න.</string>
 </resources>
