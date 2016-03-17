@@ -32,5 +32,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Activity label of BluetoothDunPermissionActivity, also used as Strings in the permission dialog [CHAR LIMIT=none] -->
+  <string name="bluetooth_dun_request">DUN विनंती</string>
   <!-- Bluetooth DUN permission Alert Activity text [CHAR LIMIT=none] -->
+  <string name="bluetooth_dun_acceptance_dialog_text">%1$s ला DUN वापरायचे आहे. %2$s ला ऍक्सेस द्यायचा?</string>
 </resources>

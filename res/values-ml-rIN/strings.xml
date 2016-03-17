@@ -17,7 +17,14 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="app_name">ബ്ലൂടൂത്ത് വിപുലീകരണങ്ങൾ</string>
+  <string name="defaultname">കാർകിറ്റ്</string>
   <!-- Do not translate. android:process of this application. -->
   <!-- Bluetooth FTP or MAP permission Alert Activity checkbox text [CHAR LIMIT=none] -->
+  <string name="bluetooth_remember_choice">വീണ്ടും ആവശ്യപ്പെടരുത്</string>
+  <string name="acceptance_timeout_message">%1$s ല്‍ നിന്ന് കണക്ഷന്‍ അംഗീകരിക്കൽ കാലഹരണപ്പെട്ടു</string>
+  <string name="authentication_timeout_message">%1$s ലെ ആധികാരികത കാലഹരണപ്പെട്ടു</string>
   <!-- Notification message when a Bluetooth device wants to pair with us -->
+  <string name="notif_ticker">ബ്ലൂടൂത്ത് കണക്ഷൻ അഭ്യർത്ഥന</string>
+  <string name="notif_message">\'<xliff:g id="device_name">%1$s</xliff:g>\' ലേക്ക് ബന്ധിപ്പിക്കുന്നതിന് സ്പർശിക്കുക.</string>
 </resources>

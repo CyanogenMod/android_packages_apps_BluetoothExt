@@ -32,5 +32,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Activity label of BluetoothSapPermissionActivity, also used as Strings in the permission dialog [CHAR LIMIT=none] -->
+  <string name="bluetooth_sap_request">SAP विनंती</string>
   <!-- Bluetooth SAP permission Alert Activity text [CHAR LIMIT=none] -->
+  <string name="bluetooth_sap_acceptance_dialog_text">%1$s ला तुमचे सिम मध्ये ऍक्सेस करायचा आहे. %2$s ला ऍक्सेस द्यायचा?</string>
 </resources>
