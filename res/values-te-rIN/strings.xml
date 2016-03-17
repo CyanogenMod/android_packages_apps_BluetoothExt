@@ -17,7 +17,14 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="app_name">బ్లూటూత్ పొడిగింపులు</string>
+  <string name="defaultname">కార్ కిట్</string>
   <!-- Do not translate. android:process of this application. -->
   <!-- Bluetooth FTP or MAP permission Alert Activity checkbox text [CHAR LIMIT=none] -->
+  <string name="bluetooth_remember_choice">మళ్లీ అడగవద్దు</string>
+  <string name="acceptance_timeout_message">%1$s నుండి అనుసంధానాన్ని అంగీకరించడానికి సమయం ముగిసింది</string>
+  <string name="authentication_timeout_message">%1$s తో ప్రమాణీకరణ సమయం ముగిసింది</string>
   <!-- Notification message when a Bluetooth device wants to pair with us -->
+  <string name="notif_ticker">బ్లూటూత్ కనెక్షన్ అభ్యర్థన</string>
+  <string name="notif_message">\'<xliff:g id="device_name">%1$s</xliff:g>\' కు అనుసంధానం చేసేందుకు తాకండి.</string>
 </resources>
