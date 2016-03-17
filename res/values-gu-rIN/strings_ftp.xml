@@ -31,10 +31,16 @@
  */
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="ftp_session_key_dialog_title">%1$s ના સત્ર માટે કી આપો</string>
+  <string name="ftp_session_key_dialog_title">%1$s માટે સેશન કિ ટાઇપ કરો</string>
+  <string name="ftp_session_key_dialog_header">બ્લુટુથ સેશન માટે કિ ની આવશ્યકતા છે</string>
   <!-- Notification title when a Bluetooth device wants to pair with us -->
+  <string name="ftp_notif_title">FTP સેશન માટે કી ની વિનંતી </string>
   <!--Notification Title for ACTIVE SESSION -->
+  <string name="ftp_notif_active_session">Bluetooth FTP સક્રિય સેશન</string>
   <!--Notification message for ACTIVE SESSION -->
+  <string name="ftp_notif_connected">Bluetooth ફાઇલ ટ્રાન્સફર ઍક્સેસ \'<xliff:g id="device_name">%1$s</xliff:g>\' ને.</string>
   <!-- Activity label of BluetoothFtpPermissionActivity, also used as Strings in the permission dialog [CHAR LIMIT=none] -->
+  <string name="bluetooth_ftp_request">FTP વિનંતી</string>
   <!-- Bluetooth FTP permission Alert Activity text [CHAR LIMIT=none] -->
+  <string name="bluetooth_ftp_acceptance_dialog_text">%1$s તમારી ફાઇલો અને ફોલ્ડરો ઍક્સેસ કરવા માંગે છે. શું તમે %2$sને એક્સેસ આપવા માંગો છો?</string>
 </resources>

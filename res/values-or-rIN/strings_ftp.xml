@@ -31,9 +31,16 @@
  */
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="ftp_session_key_dialog_title">%1$s ପାଇଁ ଅଧିବେସନ କୀ ଟାଇପ୍‌ କରନ୍ତୁ</string>
+  <string name="ftp_session_key_dialog_header">ବ୍ଲୁଟୁଥ୍ ଅଧିବେସନ କୀ ଆବଶ୍ୟକୀୟ</string>
   <!-- Notification title when a Bluetooth device wants to pair with us -->
+  <string name="ftp_notif_title">FTP ପାଇଁ ଅଧିବେଶନ କୀ ଅନୁରୋଧ</string>
   <!--Notification Title for ACTIVE SESSION -->
+  <string name="ftp_notif_active_session">ବ୍ଲୁଟୁଥ୍‍ FTP ସକ୍ରିୟ ଅଧିବେଶନ</string>
   <!--Notification message for ACTIVE SESSION -->
+  <string name="ftp_notif_connected">\'<xliff:g id="device_name">%1$s</xliff:g>\'କୁ ବ୍ଲୁ୍ଟୁଥ୍‍ ଫାଇଲ୍‍ ଟ୍ରାନ୍ସଫର୍‍ ଆକ୍‍ସେସ୍‍।</string>
   <!-- Activity label of BluetoothFtpPermissionActivity, also used as Strings in the permission dialog [CHAR LIMIT=none] -->
+  <string name="bluetooth_ftp_request">FTP ଅନୁରୋଧ</string>
   <!-- Bluetooth FTP permission Alert Activity text [CHAR LIMIT=none] -->
+  <string name="bluetooth_ftp_acceptance_dialog_text">%1$s ଆପଣଙ୍କ ଫାଇଲ୍‍ ଫୋଲ୍‍ଡର୍‍ ‌ସେସ୍‍ କରିବାକୁ ଚାହାଁନ୍ତି। %2$sକୁ ଆକସେସ୍ କରିବାକୁ?</string>
 </resources>

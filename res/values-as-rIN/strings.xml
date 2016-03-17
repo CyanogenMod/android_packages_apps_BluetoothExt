@@ -17,7 +17,14 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="app_name">Bluetooth সম্প্ৰসাৰণ</string>
+  <string name="defaultname">গাড়ীকিট</string>
   <!-- Do not translate. android:process of this application. -->
   <!-- Bluetooth FTP or MAP permission Alert Activity checkbox text [CHAR LIMIT=none] -->
+  <string name="bluetooth_remember_choice">পুনৰ নুসুধিব৷</string>
+  <string name="acceptance_timeout_message">%1$s ৰ পৰা সংযোগ গ্ৰহণ কৰাৰ সময় উকলিল</string>
+  <string name="authentication_timeout_message">%1$s ৰ সৈতে প্ৰমাণীকৰণৰ সময় উকলিল</string>
   <!-- Notification message when a Bluetooth device wants to pair with us -->
+  <string name="notif_ticker">Bluetooth সংযোগ অনুৰোধ</string>
+  <string name="notif_message">ইয়ালৈ সংযোগ কৰিবলৈ স্পৰ্শ কৰক \'<xliff:g id="device_name">%1$s</xliff:g>\'৷</string>
 </resources>
