@@ -31,7 +31,7 @@
  */
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="ftp_session_key_dialog_title">اكتب مفتاح الجلسة ل %1$s</string>
+  <string name="ftp_session_key_dialog_title">اكتب مفتاح الجلسة لـ %1$s</string>
   <string name="ftp_session_key_dialog_header">يلزم مفتاح جلسة البلوتوث</string>
   <!-- Notification title when a Bluetooth device wants to pair with us -->
   <string name="ftp_notif_title">طلب مفتاح الجلسة لي FTP</string>
