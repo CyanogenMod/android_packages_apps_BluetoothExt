@@ -31,6 +31,8 @@
  */
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- Activity label of BluetoothDunPermissionActivity, also used as Strings in the permission dialog [CHAR LIMIT=none] -->
   <string name="bluetooth_dun_request">DUN 請求</string>
+  <!-- Bluetooth DUN permission Alert Activity text [CHAR LIMIT=none] -->
   <string name="bluetooth_dun_acceptance_dialog_text">「%1$s」要求使用 DUN，要將存取權授予「%2$s」嗎？</string>
 </resources>

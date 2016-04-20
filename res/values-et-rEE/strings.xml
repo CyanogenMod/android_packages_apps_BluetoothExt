@@ -19,9 +19,12 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="app_name">Bluetoothi laiendid</string>
   <string name="defaultname">Autokomplekt</string>
+  <!-- Do not translate. android:process of this application. -->
+  <!-- Bluetooth FTP or MAP permission Alert Activity checkbox text [CHAR LIMIT=none] -->
   <string name="bluetooth_remember_choice">Rohkem ei küsita</string>
   <string name="acceptance_timeout_message">Ühendusega nõustumine seadmega %1$s aegus</string>
   <string name="authentication_timeout_message">Kooskõlastamine seadmega %1$s aegus</string>
+  <!-- Notification message when a Bluetooth device wants to pair with us -->
   <string name="notif_ticker">Bluetooth-ühenduse taotlus</string>
   <string name="notif_message">Puuduta ühendamiseks seadmega \'<xliff:g id="device_name">%1$s</xliff:g>\'.</string>
 </resources>

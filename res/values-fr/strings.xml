@@ -19,9 +19,12 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="app_name">Extensions Bluetooth</string>
   <string name="defaultname">Kit mains libres</string>
+  <!-- Do not translate. android:process of this application. -->
+  <!-- Bluetooth FTP or MAP permission Alert Activity checkbox text [CHAR LIMIT=none] -->
   <string name="bluetooth_remember_choice">Ne plus demander</string>
   <string name="acceptance_timeout_message">Dépassement du délai d\'acceptation de la connexion de %1$s</string>
   <string name="authentication_timeout_message">Délai d\'authentification avec %1$s dépassé</string>
+  <!-- Notification message when a Bluetooth device wants to pair with us -->
   <string name="notif_ticker">Demande de connexion Bluetooth</string>
   <string name="notif_message">Appuyez pour se connecter à \'<xliff:g id="device_name">%1$s</xliff:g>\'.</string>
 </resources>
