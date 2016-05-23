@@ -19,9 +19,12 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="app_name">ملحقات البلوتوث</string>
   <string name="defaultname">كركيت</string>
+  <!-- Do not translate. android:process of this application. -->
+  <!-- Bluetooth FTP or MAP permission Alert Activity checkbox text [CHAR LIMIT=none] -->
   <string name="bluetooth_remember_choice">لا تسأل مرة أخرى</string>
   <string name="acceptance_timeout_message">مهلة قبول اتصال انتهت من %1$s</string>
   <string name="authentication_timeout_message">انتهت مهلة المصادقة مع %1$s</string>
+  <!-- Notification message when a Bluetooth device wants to pair with us -->
   <string name="notif_ticker">طلب اتصال Bluetooth</string>
   <string name="notif_message">اللمس للاتصال بي \'<xliff:g id="device_name">%1$s</xliff:g>\'.</string>
 </resources>

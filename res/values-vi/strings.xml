@@ -19,9 +19,12 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="app_name">Tiện ích mở rộng Bluetooth</string>
   <string name="defaultname">Carkit</string>
+  <!-- Do not translate. android:process of this application. -->
+  <!-- Bluetooth FTP or MAP permission Alert Activity checkbox text [CHAR LIMIT=none] -->
   <string name="bluetooth_remember_choice">Đừng hỏi lại</string>
   <string name="acceptance_timeout_message">Đã hết thời gian chấp nhận kết nối từ %1$s</string>
   <string name="authentication_timeout_message">Hết thời gian xác thực với %1$s</string>
+  <!-- Notification message when a Bluetooth device wants to pair with us -->
   <string name="notif_ticker">Yêu cầu kết nối Bluetooth</string>
   <string name="notif_message">Chạm để kết nối với \'<xliff:g id="device_name">%1$s</xliff:g>\'.</string>
 </resources>

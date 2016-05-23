@@ -32,10 +32,15 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="ftp_session_key_dialog_title">הקלד מפתח הפעלה עבור %1$s</string>
-  <string name="ftp_session_key_dialog_header">קוד הפעלת Bluetooth דרוש</string>
-  <string name="ftp_notif_title">מפתח דרוש להפעלת FTP</string>
+  <string name="ftp_session_key_dialog_header">נדרש קוד הפעלת Bluetooth</string>
+  <!-- Notification title when a Bluetooth device wants to pair with us -->
+  <string name="ftp_notif_title">מפתח הפעלה לבקשת FTP</string>
+  <!--Notification Title for ACTIVE SESSION -->
   <string name="ftp_notif_active_session">Bluetooth FTP פעיל</string>
+  <!--Notification message for ACTIVE SESSION -->
   <string name="ftp_notif_connected">גישה להעברת קובץ ב-Bluetooth ל-\'<xliff:g id="device_name">%1$s</xliff:g>\'.</string>
+  <!-- Activity label of BluetoothFtpPermissionActivity, also used as Strings in the permission dialog [CHAR LIMIT=none] -->
   <string name="bluetooth_ftp_request">בקשת FTP</string>
-  <string name="bluetooth_ftp_acceptance_dialog_text">%1$s מבקש לגשת לקבצים ותקיות אצלך. לתת הרשאה ל-%2$s?</string>
+  <!-- Bluetooth FTP permission Alert Activity text [CHAR LIMIT=none] -->
+  <string name="bluetooth_ftp_acceptance_dialog_text">%1$s מבקש לגשת לקבצים ולתיקיות שלך. לאפשר גישה ל-%2$s?</string>
 </resources>

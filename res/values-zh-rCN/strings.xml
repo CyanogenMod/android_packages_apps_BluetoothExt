@@ -19,9 +19,12 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="app_name">蓝牙扩展</string>
   <string name="defaultname">耳机</string>
+  <!-- Do not translate. android:process of this application. -->
+  <!-- Bluetooth FTP or MAP permission Alert Activity checkbox text [CHAR LIMIT=none] -->
   <string name="bluetooth_remember_choice">不要再问</string>
   <string name="acceptance_timeout_message">来自 %1$s 的连接接受超时</string>
   <string name="authentication_timeout_message">与 %1$s 验证超时</string>
+  <!-- Notification message when a Bluetooth device wants to pair with us -->
   <string name="notif_ticker">蓝牙连接请求</string>
   <string name="notif_message">触摸以连接 \'<xliff:g id="device_name">%1$s</xliff:g>\'。</string>
 </resources>

@@ -18,9 +18,12 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="defaultname">車用套件</string>
+  <!-- Do not translate. android:process of this application. -->
+  <!-- Bluetooth FTP or MAP permission Alert Activity checkbox text [CHAR LIMIT=none] -->
   <string name="bluetooth_remember_choice">不要再次詢問</string>
   <string name="acceptance_timeout_message">接受來自 %1$s 的連接逾時</string>
   <string name="authentication_timeout_message">與 %1$s 驗證逾時</string>
+  <!-- Notification message when a Bluetooth device wants to pair with us -->
   <string name="notif_ticker">藍牙連接請求</string>
   <string name="notif_message">輕觸以連接「<xliff:g id="device_name">%1$s</xliff:g>」。</string>
 </resources>

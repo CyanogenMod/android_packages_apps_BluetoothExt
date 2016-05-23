@@ -19,9 +19,12 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="app_name">Bluetooth екстензије</string>
   <string name="defaultname">Ауто комплет</string>
+  <!-- Do not translate. android:process of this application. -->
+  <!-- Bluetooth FTP or MAP permission Alert Activity checkbox text [CHAR LIMIT=none] -->
   <string name="bluetooth_remember_choice">Не питај поново</string>
   <string name="acceptance_timeout_message">Време прихватање везе са %1$s је истекло</string>
   <string name="authentication_timeout_message">Време оверавања аутентичности са %1$s је истекло</string>
+  <!-- Notification message when a Bluetooth device wants to pair with us -->
   <string name="notif_ticker">Захтев за Bluetooth везу</string>
   <string name="notif_message">Додирни за повезивање са \'<xliff:g id="име уређаја">%1$s</xliff:g>\'.</string>
 </resources>
