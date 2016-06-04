@@ -21,7 +21,7 @@
   <string name="defaultname">カーキット</string>
   <!-- Do not translate. android:process of this application. -->
   <!-- Bluetooth FTP or MAP permission Alert Activity checkbox text [CHAR LIMIT=none] -->
-  <string name="bluetooth_remember_choice">次回から表示しない</string>
+  <string name="bluetooth_remember_choice">次回から確認しない</string>
   <string name="acceptance_timeout_message">%1$sからの接続の受け入れがタイムアウトしました</string>
   <string name="authentication_timeout_message">%1$sとの認証がタイムアウトしました</string>
   <!-- Notification message when a Bluetooth device wants to pair with us -->
