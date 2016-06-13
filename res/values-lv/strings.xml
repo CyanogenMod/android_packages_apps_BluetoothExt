@@ -17,10 +17,14 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="app_name">Bluetooth paplašinājumi</string>
   <string name="defaultname">Autokopa</string>
+  <!-- Do not translate. android:process of this application. -->
+  <!-- Bluetooth FTP or MAP permission Alert Activity checkbox text [CHAR LIMIT=none] -->
   <string name="bluetooth_remember_choice">Turpmāk nejautāt</string>
   <string name="acceptance_timeout_message">Savienojuma pieņemšanai no %1$s iestājās noildze</string>
   <string name="authentication_timeout_message">Autentifikācijai ar %1$s  iestājās noildze</string>
+  <!-- Notification message when a Bluetooth device wants to pair with us -->
   <string name="notif_ticker">Bluetooth savienojuma pieprasījums</string>
   <string name="notif_message">Pieskarieties, lai savienotos ar \'<xliff:g id="device_name">%1$s</xliff:g>\'.</string>
 </resources>

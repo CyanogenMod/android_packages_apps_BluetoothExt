@@ -31,8 +31,12 @@
  */
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!--Notification Title for ACTIVE SESSION -->
   <string name="map_notif_active_session">Aktívna relácia Bluetooth MAP</string>
+  <!--Notification message for ACTIVE SESSION -->
   <string name="map_notif_connected">Prístup k správam cez Bluetooth k \'<xliff:g id="device_name">%1$s</xliff:g>\'.</string>
+  <!-- Activity label of BluetoothMasPermissionActivity, also used as Strings in the permission dialog [CHAR LIMIT=none] -->
   <string name="bluetooth_mas_request">Žiadosť o prístup k správam</string>
+  <!-- Bluetooth MAS permission Alert Activity text [CHAR LIMIT=none] -->
   <string name="bluetooth_mas_acceptance_dialog_text">Zariadenie %1$s by chcelo pristupovať k Vaším správam. Umožniť prístup %2$s?</string>
 </resources>

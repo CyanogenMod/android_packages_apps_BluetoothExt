@@ -33,9 +33,14 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="ftp_session_key_dialog_title">%1$sのセッションキーを入力してください</string>
   <string name="ftp_session_key_dialog_header">Bluetoothセッションキーが必要です</string>
+  <!-- Notification title when a Bluetooth device wants to pair with us -->
   <string name="ftp_notif_title">FTPのセッションキーリクエスト</string>
+  <!--Notification Title for ACTIVE SESSION -->
   <string name="ftp_notif_active_session">Bluetooth FTPアクティブセッション</string>
+  <!--Notification message for ACTIVE SESSION -->
   <string name="ftp_notif_connected">｢<xliff:g id="device_name">%1$s</xliff:g>｣へのBluetoothファイル転送アクセス。</string>
+  <!-- Activity label of BluetoothFtpPermissionActivity, also used as Strings in the permission dialog [CHAR LIMIT=none] -->
   <string name="bluetooth_ftp_request">FTPリクエスト</string>
+  <!-- Bluetooth FTP permission Alert Activity text [CHAR LIMIT=none] -->
   <string name="bluetooth_ftp_acceptance_dialog_text">%1$sがファイルとフォルダにアクセスしようとしています。%2$sにアクセスを許可しますか？</string>
 </resources>

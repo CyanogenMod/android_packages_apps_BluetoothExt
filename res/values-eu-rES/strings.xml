@@ -19,9 +19,12 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="app_name">Bluetooth luzapenak</string>
   <string name="defaultname">Kotxerako gailua</string>
+  <!-- Do not translate. android:process of this application. -->
+  <!-- Bluetooth FTP or MAP permission Alert Activity checkbox text [CHAR LIMIT=none] -->
   <string name="bluetooth_remember_choice">Ez galdetu berriro</string>
   <string name="acceptance_timeout_message">%1$s-k konexioa onartzeko denbora-muga gainditu da</string>
-  <string name="authentication_timeout_message">%1$s autentifikazio denbora muga gainditu da</string>
+  <string name="authentication_timeout_message">%1$s autentifikazio denbora-muga gainditu da</string>
+  <!-- Notification message when a Bluetooth device wants to pair with us -->
   <string name="notif_ticker">Bluetooth konexio eskaera</string>
   <string name="notif_message">Sakatu <xliff:g id="device_name">%1$s</xliff:g> -rekin konektatzeko.</string>
 </resources>
