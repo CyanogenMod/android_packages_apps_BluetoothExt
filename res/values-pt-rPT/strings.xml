@@ -17,7 +17,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="app_name">Extensões bluetooth</string>
+  <string name="app_name">Extensões Bluetooth</string>
   <string name="defaultname">Kit mãos livres</string>
   <!-- Do not translate. android:process of this application. -->
   <!-- Bluetooth FTP or MAP permission Alert Activity checkbox text [CHAR LIMIT=none] -->
