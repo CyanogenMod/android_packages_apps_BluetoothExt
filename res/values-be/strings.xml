@@ -21,7 +21,7 @@
   <string name="defaultname">Гучная сувязь</string>
   <!-- Do not translate. android:process of this application. -->
   <!-- Bluetooth FTP or MAP permission Alert Activity checkbox text [CHAR LIMIT=none] -->
-  <string name="bluetooth_remember_choice">Больлей не пытаць</string>
+  <string name="bluetooth_remember_choice">Больш не пытацца</string>
   <string name="acceptance_timeout_message">Перавышаны час чакання дазволу падлучэння да прылады %1$s</string>
   <string name="authentication_timeout_message">Перавышана час чакання аўтэнтыфікацыі на прыладзе %1$s</string>
   <!-- Notification message when a Bluetooth device wants to pair with us -->
