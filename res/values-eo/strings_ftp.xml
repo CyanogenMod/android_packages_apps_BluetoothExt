@@ -31,7 +31,6 @@
  */
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="ftp_session_key_dialog_title">Entajpu sesian ŝlosilon por %1$s</string>
   <string name="ftp_session_key_dialog_header">Bludenta sesia ŝlosilo bezonata</string>
   <!-- Notification title when a Bluetooth device wants to pair with us -->
   <string name="ftp_notif_title">Peto de sesia ŝlosilo por FTP</string>
