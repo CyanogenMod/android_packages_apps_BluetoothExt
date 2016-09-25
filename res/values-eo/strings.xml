@@ -17,7 +17,6 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="app_name">Bludentaj kromprogramoj</string>
   <string name="defaultname">Aŭta ilaro</string>
   <!-- Do not translate. android:process of this application. -->
   <!-- Bluetooth FTP or MAP permission Alert Activity checkbox text [CHAR LIMIT=none] -->
