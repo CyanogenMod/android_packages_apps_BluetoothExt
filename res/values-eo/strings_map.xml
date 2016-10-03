@@ -33,9 +33,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!--Notification Title for ACTIVE SESSION -->
   <!--Notification message for ACTIVE SESSION -->
-  <string name="map_notif_connected">Bludenta mesaĝo aliras al \'<xliff:g id="device_name">%1$s</xliff:g>\'.</string>
   <!-- Activity label of BluetoothMasPermissionActivity, also used as Strings in the permission dialog [CHAR LIMIT=none] -->
-  <string name="bluetooth_mas_request">Peto de atingo de mesaĝo</string>
   <!-- Bluetooth MAS permission Alert Activity text [CHAR LIMIT=none] -->
-  <string name="bluetooth_mas_acceptance_dialog_text">%1$s deziras atingi viajn mesaĝojn. Ĉu permesi aliron al %2$s?</string>
 </resources>
