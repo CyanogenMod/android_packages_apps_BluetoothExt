@@ -42,5 +42,5 @@
   <!-- Activity label of BluetoothFtpPermissionActivity, also used as Strings in the permission dialog [CHAR LIMIT=none] -->
   <string name="bluetooth_ftp_request">FTP 請求</string>
   <!-- Bluetooth FTP permission Alert Activity text [CHAR LIMIT=none] -->
-  <string name="bluetooth_ftp_acceptance_dialog_text">「%1$s」要求存取您的檔案與資料夾，要將存取權授予「%2$s」嗎？</string>
+  <string name="bluetooth_ftp_acceptance_dialog_text">「%1$s」請求存取您的檔案與資料夾，要將權限授予「%2$s」嗎？</string>
 </resources>
