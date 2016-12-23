@@ -38,5 +38,5 @@
   <!-- Activity label of BluetoothMasPermissionActivity, also used as Strings in the permission dialog [CHAR LIMIT=none] -->
   <string name="bluetooth_mas_request">訊息存取要求</string>
   <!-- Bluetooth MAS permission Alert Activity text [CHAR LIMIT=none] -->
-  <string name="bluetooth_mas_acceptance_dialog_text">「%1$s」要求存取您的訊息，要將存取權授予「%2$s」嗎？</string>
+  <string name="bluetooth_mas_acceptance_dialog_text">「%1$s」請求存取您的訊息，要將權限授予「%2$s」？</string>
 </resources>
